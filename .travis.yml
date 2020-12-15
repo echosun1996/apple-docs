@@ -6,6 +6,7 @@ python:
 install:
   - pip install mkdocs
   - echo -e "machine github.com\n  login ${GITHUB_TOKEN}" > ~/.netrc
+  - pip install mkdocs-material
 
 script:
   - mkdocs gh-deploy --force --clean
