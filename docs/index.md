@@ -1,17 +1,7 @@
-# Welcome to MkDocs
+# Welcome to apple-docs
+apple文档翻译计划。
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+目前主要针对apple文档中的Swift和SwiftUI两部分进行翻译。  
+对每一条的翻译都附带了原文，可以通过搜索功能快速定位到要查询的位置。
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+属于一边学习一边翻译的状态，如果有兴趣一起学习，欢迎PR。
