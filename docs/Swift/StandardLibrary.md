@@ -25,7 +25,6 @@
 
 #### Initialization with Literals
 
-
 ### Programming Tasks
 #### Input and Output
 Print values to the console, read from and write to text streams, and use command line arguments.
