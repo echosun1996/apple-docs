@@ -18,7 +18,7 @@
 #### 字符串和文本-Strings and Text
 
 
-### Tools for Your Types
+### 自定义类型工具Tools for Your Types
 #### Basic Behaviors
 
 #### Encoding, Decoding, and Serialization
