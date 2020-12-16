@@ -9,13 +9,13 @@
 
 ## 字典-Dictionary
 
-## Swift Standard Library
+## Swift标准库-Swift Standard Library
 
-### Values and Collections
+### 数值和集合Values and Collections
 
-#### Numbers and Basic Values
+#### 数字和基本数值-Numbers and Basic Values
 
-#### Strings and Text
+#### 字符串和文本-Strings and Text
 
 
 ### Tools for Your Types
