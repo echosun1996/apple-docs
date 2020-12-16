@@ -22,14 +22,18 @@
 #### Basic Behaviors
 
 #### Encoding, Decoding, and Serialization
+
 #### Initialization with Literals
 
 
 ### Programming Tasks
 #### Input and Output
 Print values to the console, read from and write to text streams, and use command line arguments.
+
 #### Debugging and Reflection
 Fortify your code with runtime checks, and examine your values' runtime representation.
+
 #### Key-Path Expressions
 Use key-path expressions to access properties dynamically.
+
 #### Manual Memory Management
