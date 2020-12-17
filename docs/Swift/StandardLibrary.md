@@ -1,5 +1,6 @@
 # 标准库-StandardLibrary
 ## 整数-Int
+有符号整数
 
 ## 浮点数-Double
 
