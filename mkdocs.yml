@@ -1,19 +1,19 @@
 site_name: My Docs
 theme:
     name: material
-nav:
-  - 首页: index.md
-  - Swift: 
-    - Swift/index.md
-    - Swift/StandardLibrary.md 
-    - Swift/DataModeling.md
-    - Swift/DataFlowAndControlFlow.md
-    - Swift/LanguageInteroperability.md
-  - SwiftUI: 
-    - SwiftUI/index.md
-    - SwiftUI/Essentials.md
-    - SwiftUI/UserInterface.md
-    - SwiftUI/DataAndEvents.md
-    - SwiftUI/PreviewsInXcode.md
-  - 说明: instruction.md
+      #nav:
+      #  - 首页: index.md
+      #  - Swift: 
+      #    - Swift/index.md
+      #    - Swift/StandardLibrary.md 
+      #    - Swift/DataModeling.md
+      #    - Swift/DataFlowAndControlFlow.md
+      #    - Swift/LanguageInteroperability.md
+      #  - SwiftUI: 
+      #    - SwiftUI/index.md
+      #    - SwiftUI/Essentials.md
+      #    - SwiftUI/UserInterface.md
+      #    - SwiftUI/DataAndEvents.md
+      #    - SwiftUI/PreviewsInXcode.md
+      #  - 说明: instruction.md
 
