@@ -10,12 +10,6 @@ install:
 
 script:
   - mkdocs gh-deploy --force --clean
-  - git pull --rebase gh-pages gh-pages
-  - git checkout gh-pages
-  - echo "apple-docs.echosun.xyz" > CNAME
-  - git add CNAME
-  - git commit -m "Change CNAME"
-  - git push
 branches:
   only:
     - master
