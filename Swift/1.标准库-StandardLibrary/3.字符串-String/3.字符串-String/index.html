@@ -1,0 +1,1527 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.2">
+    
+    
+      
+        <title>字符串-String - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.73f7c429.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#-string" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../../.." title="My Docs" class="md-header-nav__button md-logo" aria-label="My Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              字符串-String
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." class="md-nav__link">
+      apple文档翻译计划
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../instruction/" class="md-nav__link">
+      说明
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Swift
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Swift" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Swift
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../0.swift%E6%96%87%E6%A1%A3%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+      swift文档说明
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2" checked>
+    
+    <label class="md-nav__link" for="nav-3-2">
+      1.标准库 StandardLibrary
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.标准库 StandardLibrary" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        <span class="md-nav__icon md-icon"></span>
+        1.标准库 StandardLibrary
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-1" type="checkbox" id="nav-3-2-1" >
+    
+    <label class="md-nav__link" for="nav-3-2-1">
+      1.整数 Int
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.整数 Int" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-1">
+        <span class="md-nav__icon md-icon"></span>
+        1.整数 Int
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../1.%E6%95%B4%E6%95%B0-Int/1.%E6%95%B4%E6%95%B0-Int/" class="md-nav__link">
+      1.整数-Int
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-2" type="checkbox" id="nav-3-2-2" >
+    
+    <label class="md-nav__link" for="nav-3-2-2">
+      2.浮点数 Double
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="2.浮点数 Double" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        2.浮点数 Double
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../2.%E6%B5%AE%E7%82%B9%E6%95%B0-Double/2.%E6%B5%AE%E7%82%B9%E6%95%B0-Double/" class="md-nav__link">
+      浮点数-Double
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-3" type="checkbox" id="nav-3-2-3" checked>
+    
+    <label class="md-nav__link" for="nav-3-2-3">
+      3.字符串 String
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="3.字符串 String" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-3">
+        <span class="md-nav__icon md-icon"></span>
+        3.字符串 String
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        字符串-String
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      字符串-String
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modifying-and-comparing-strings" class="md-nav__link">
+    Modifying and Comparing Strings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-string-elements" class="md-nav__link">
+    Accessing String Elements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-a-strings-unicode-representation" class="md-nav__link">
+    Accessing a String’s Unicode Representation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unicode-scalar-view" class="md-nav__link">
+    Unicode Scalar View
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utf-16-view" class="md-nav__link">
+    UTF-16 View
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utf-8-view" class="md-nav__link">
+    UTF-8 View
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-string-view-elements" class="md-nav__link">
+    Accessing String View Elements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-optimizations" class="md-nav__link">
+    Performance Optimizations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bridging-between-string-and-nsstring" class="md-nav__link">
+    Bridging Between String and NSString
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-4" type="checkbox" id="nav-3-2-4" >
+    
+    <label class="md-nav__link" for="nav-3-2-4">
+      4.数组 Array
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="4.数组 Array" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-4">
+        <span class="md-nav__icon md-icon"></span>
+        4.数组 Array
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../4.%E6%95%B0%E7%BB%84-Array/4.%E6%95%B0%E7%BB%84-Array/" class="md-nav__link">
+      数组-Array
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-5" type="checkbox" id="nav-3-2-5" >
+    
+    <label class="md-nav__link" for="nav-3-2-5">
+      5.字典 Dictionary
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="5.字典 Dictionary" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-5">
+        <span class="md-nav__icon md-icon"></span>
+        5.字典 Dictionary
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../5.%E5%AD%97%E5%85%B8-Dictionary/5.%E5%AD%97%E5%85%B8-Dictionary/" class="md-nav__link">
+      字典-Dictionary.md
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" >
+    
+    <label class="md-nav__link" for="nav-3-3">
+      2.数据模型 DataModeling
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="2.数据模型 DataModeling" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        <span class="md-nav__icon md-icon"></span>
+        2.数据模型 DataModeling
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../2.%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B-DataModeling/1.%E7%BB%93%E6%9E%84%E4%BD%93%E5%92%8C%E7%B1%BB%E7%9A%84%E9%80%89%E6%8B%A9-ChoosingBetweenStructuresAndClasses/" class="md-nav__link">
+      结构体和类的选择-Choosing Between Structures and Classes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../2.%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B-DataModeling/2.%E9%87%87%E7%94%A8%E5%85%B1%E5%90%8C%E5%8D%8F%E8%AE%AE-AdoptingCommonProtocols/" class="md-nav__link">
+      采用共同协议-AdoptingCommonProtocols
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    
+    <label class="md-nav__link" for="nav-4">
+      SwiftUI
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="SwiftUI" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        SwiftUI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../SwiftUI/0.swift%E6%96%87%E6%A1%A3%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+      swift文档说明
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" >
+    
+    <label class="md-nav__link" for="nav-4-2">
+      1.必需 Essentials
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.必需 Essentials" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        <span class="md-nav__icon md-icon"></span>
+        1.必需 Essentials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-1" type="checkbox" id="nav-4-2-1" >
+    
+    <label class="md-nav__link" for="nav-4-2-1">
+      1.SwiftUI介绍 IntroducingSwiftUI
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.SwiftUI介绍 IntroducingSwiftUI" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2-1">
+        <span class="md-nav__icon md-icon"></span>
+        1.SwiftUI介绍 IntroducingSwiftUI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-1-1" type="checkbox" id="nav-4-2-1-1" >
+    
+    <label class="md-nav__link" for="nav-4-2-1-1">
+      1.SwiftUI基本件 SwiftUIEssentials
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.SwiftUI基本件 SwiftUIEssentials" data-md-level="4">
+      <label class="md-nav__title" for="nav-4-2-1-1">
+        <span class="md-nav__icon md-icon"></span>
+        1.SwiftUI基本件 SwiftUIEssentials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../SwiftUI/1.%E5%BF%85%E9%9C%80-Essentials/1.SwiftUI%E4%BB%8B%E7%BB%8D-IntroducingSwiftUI/1.SwiftUI%E5%9F%BA%E6%9C%AC%E4%BB%B6-SwiftUIEssentials/1.%E5%88%9B%E5%BB%BA%E5%B9%B6%E7%BB%84%E5%90%88%E8%A7%86%E5%9B%BE-CreatingAndCombiningViews/" class="md-nav__link">
+      创建并组合视图-CreatingAndCombiningViews
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../SwiftUI/1.%E5%BF%85%E9%9C%80-Essentials/1.SwiftUI%E4%BB%8B%E7%BB%8D-IntroducingSwiftUI/1.SwiftUI%E5%9F%BA%E6%9C%AC%E4%BB%B6-SwiftUIEssentials/2.%E6%9E%84%E5%BB%BA%E5%88%97%E8%A1%A8%E5%92%8C%E5%AF%BC%E8%88%AA-BuildingListsAndNavigation/" class="md-nav__link">
+      构建列表和导航-BuildingListsAndNavigation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../SwiftUI/1.%E5%BF%85%E9%9C%80-Essentials/1.SwiftUI%E4%BB%8B%E7%BB%8D-IntroducingSwiftUI/1.SwiftUI%E5%9F%BA%E6%9C%AC%E4%BB%B6-SwiftUIEssentials/3.%E5%A4%84%E7%90%86%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5-HandlingUserInput/" class="md-nav__link">
+      处理用户输入-HandlingUserInput
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-1-2" type="checkbox" id="nav-4-2-1-2" >
+    
+    <label class="md-nav__link" for="nav-4-2-1-2">
+      4.框架集成 FrameworkIntegration
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="4.框架集成 FrameworkIntegration" data-md-level="4">
+      <label class="md-nav__title" for="nav-4-2-1-2">
+        <span class="md-nav__icon md-icon"></span>
+        4.框架集成 FrameworkIntegration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../SwiftUI/1.%E5%BF%85%E9%9C%80-Essentials/1.SwiftUI%E4%BB%8B%E7%BB%8D-IntroducingSwiftUI/4.%E6%A1%86%E6%9E%B6%E9%9B%86%E6%88%90-FrameworkIntegration/1.%E7%BB%93%E5%90%88UIKit-InterfacingWithUIKit/" class="md-nav__link">
+      结合UIKit-InterfacingWithUIKit
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-2" type="checkbox" id="nav-4-2-2" >
+    
+    <label class="md-nav__link" for="nav-4-2-2">
+      2.APP结构和行为 App Structure and Behavior
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="2.APP结构和行为 App Structure and Behavior" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        2.APP结构和行为 App Structure and Behavior
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../SwiftUI/1.%E5%BF%85%E9%9C%80-Essentials/2.APP%E7%BB%93%E6%9E%84%E5%92%8C%E8%A1%8C%E4%B8%BA-App%20Structure%20and%20Behavior/0.APP%E7%BB%93%E6%9E%84%E5%92%8C%E8%A1%8C%E4%B8%BA-App%20Structure%20and%20Behavior/" class="md-nav__link">
+      0.APP结构和行为-App Structure and Behavior
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-2-2" type="checkbox" id="nav-4-2-2-2" >
+    
+    <label class="md-nav__link" for="nav-4-2-2-2">
+      1.必需 Essentials
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.必需 Essentials" data-md-level="4">
+      <label class="md-nav__title" for="nav-4-2-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        1.必需 Essentials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../SwiftUI/1.%E5%BF%85%E9%9C%80-Essentials/2.APP%E7%BB%93%E6%9E%84%E5%92%8C%E8%A1%8C%E4%B8%BA-App%20Structure%20and%20Behavior/1.%E5%BF%85%E9%9C%80-Essentials/1.App/" class="md-nav__link">
+      App
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" >
+    
+    <label class="md-nav__link" for="nav-4-3">
+      4.在Xcode中预览 PreviewsInXcode
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="4.在Xcode中预览 PreviewsInXcode" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        <span class="md-nav__icon md-icon"></span>
+        4.在Xcode中预览 PreviewsInXcode
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3-1" type="checkbox" id="nav-4-3-1" >
+    
+    <label class="md-nav__link" for="nav-4-3-1">
+      1.预览 Previews
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.预览 Previews" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-1">
+        <span class="md-nav__icon md-icon"></span>
+        1.预览 Previews
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../SwiftUI/4.%E5%9C%A8Xcode%E4%B8%AD%E9%A2%84%E8%A7%88-PreviewsInXcode/1.%E9%A2%84%E8%A7%88-Previews/0.%E9%A2%84%E8%A7%88-Previews/" class="md-nav__link">
+      0.预览 Previews
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3-1-2" type="checkbox" id="nav-4-3-1-2" >
+    
+    <label class="md-nav__link" for="nav-4-3-1-2">
+      1.创建预览 PreviewCreation
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.创建预览 PreviewCreation" data-md-level="4">
+      <label class="md-nav__title" for="nav-4-3-1-2">
+        <span class="md-nav__icon md-icon"></span>
+        1.创建预览 PreviewCreation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3-1-2-1" type="checkbox" id="nav-4-3-1-2-1" >
+    
+    <label class="md-nav__link" for="nav-4-3-1-2-1">
+      1.预览提供者 PreviewProvider
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.预览提供者 PreviewProvider" data-md-level="5">
+      <label class="md-nav__title" for="nav-4-3-1-2-1">
+        <span class="md-nav__icon md-icon"></span>
+        1.预览提供者 PreviewProvider
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../SwiftUI/4.%E5%9C%A8Xcode%E4%B8%AD%E9%A2%84%E8%A7%88-PreviewsInXcode/1.%E9%A2%84%E8%A7%88-Previews/1.%E5%88%9B%E5%BB%BA%E9%A2%84%E8%A7%88-PreviewCreation/1.%E9%A2%84%E8%A7%88%E6%8F%90%E4%BE%9B%E8%80%85-PreviewProvider/0.%E9%A2%84%E8%A7%88%E6%8F%90%E4%BE%9B%E8%80%85-PreviewProvider/" class="md-nav__link">
+      预览提供者-PreviewProvider
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3-1-2-1-2" type="checkbox" id="nav-4-3-1-2-1-2" >
+    
+    <label class="md-nav__link" for="nav-4-3-1-2-1-2">
+      1.设置类型 SettingTheType
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.设置类型 SettingTheType" data-md-level="6">
+      <label class="md-nav__title" for="nav-4-3-1-2-1-2">
+        <span class="md-nav__icon md-icon"></span>
+        1.设置类型 SettingTheType
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../SwiftUI/4.%E5%9C%A8Xcode%E4%B8%AD%E9%A2%84%E8%A7%88-PreviewsInXcode/1.%E9%A2%84%E8%A7%88-Previews/1.%E5%88%9B%E5%BB%BA%E9%A2%84%E8%A7%88-PreviewCreation/1.%E9%A2%84%E8%A7%88%E6%8F%90%E4%BE%9B%E8%80%85-PreviewProvider/1.%E8%AE%BE%E7%BD%AE%E7%B1%BB%E5%9E%8B-SettingTheType/1.Previews/" class="md-nav__link">
+      1.Previews
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3-1-2-1-3" type="checkbox" id="nav-4-3-1-2-1-3" >
+    
+    <label class="md-nav__link" for="nav-4-3-1-2-1-3">
+      2.生成预览者 GeneratingPreviews
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="2.生成预览者 GeneratingPreviews" data-md-level="6">
+      <label class="md-nav__title" for="nav-4-3-1-2-1-3">
+        <span class="md-nav__icon md-icon"></span>
+        2.生成预览者 GeneratingPreviews
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../SwiftUI/4.%E5%9C%A8Xcode%E4%B8%AD%E9%A2%84%E8%A7%88-PreviewsInXcode/1.%E9%A2%84%E8%A7%88-Previews/1.%E5%88%9B%E5%BB%BA%E9%A2%84%E8%A7%88-PreviewCreation/1.%E9%A2%84%E8%A7%88%E6%8F%90%E4%BE%9B%E8%80%85-PreviewProvider/2.%E7%94%9F%E6%88%90%E9%A2%84%E8%A7%88%E8%80%85-GeneratingPreviews/1.platform/" class="md-nav__link">
+      1.platform
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../SwiftUI/4.%E5%9C%A8Xcode%E4%B8%AD%E9%A2%84%E8%A7%88-PreviewsInXcode/1.%E9%A2%84%E8%A7%88-Previews/1.%E5%88%9B%E5%BB%BA%E9%A2%84%E8%A7%88-PreviewCreation/1.%E9%A2%84%E8%A7%88%E6%8F%90%E4%BE%9B%E8%80%85-PreviewProvider/2.%E7%94%9F%E6%88%90%E9%A2%84%E8%A7%88%E8%80%85-GeneratingPreviews/2.previews/" class="md-nav__link">
+      2.previews
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modifying-and-comparing-strings" class="md-nav__link">
+    Modifying and Comparing Strings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-string-elements" class="md-nav__link">
+    Accessing String Elements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-a-strings-unicode-representation" class="md-nav__link">
+    Accessing a String’s Unicode Representation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unicode-scalar-view" class="md-nav__link">
+    Unicode Scalar View
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utf-16-view" class="md-nav__link">
+    UTF-16 View
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utf-8-view" class="md-nav__link">
+    UTF-8 View
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-string-view-elements" class="md-nav__link">
+    Accessing String View Elements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-optimizations" class="md-nav__link">
+    Performance Optimizations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bridging-between-string-and-nsstring" class="md-nav__link">
+    Bridging Between String and NSString
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="-string">字符串-String</h1>
+<p>由字符集组成的Unicode字符串值。</p>
+<blockquote>
+<p>A Unicode string value that is a collection of characters.</p>
+</blockquote>
+<ul>
+<li>说明-Declaration</li>
+</ul>
+<pre><code class="language-swift">    @frozen struct String
+</code></pre>
+<ul>
+<li>概述-Overview</li>
+</ul>
+<p>字符串由一系列像<code>"Swift"</code>这样的字符组成的几何。Swift中字符串的设计很高效，它支持Unicode编码，因此不受地域文字差异的限制。<code>String</code>类型桥接了Objective-C 语言中的<code>NSString</code>，并且能够用字符串与C语言函数的相互操作。  </p>
+<p>你可以使用“字符串字面量”(string literals)或“字符串插值”(string interpolation)来创建新的字符串。一个 <em>字符串字面量</em> 是一些用引号括起来的字符。</p>
+<blockquote>
+<p>A string is a series of characters, such as<code>"Swift"</code>, that forms a collection. Strings in Swift are Unicode correct and locale insensitive, and are designed to be efficient. The<code>String</code>type bridges with the Objective-C class<code>NSString</code>and offers interoperability with C functions that works with strings.
+    You can create new strings using string literals or string interpolations. A <em>string literal</em> is a series of characters enclosed in quotes.</p>
+</blockquote>
+<pre><code class="language-swift">let greeting = &quot;Welcome!&quot;
+</code></pre>
+<p><em>字符串插值</em> 是字符串字元，它可以评估任何包含的表达式并将结果转换为字符串形式。字符串插值为你提供了一个简单的方法来从多个片段中建立一个字符串。在字符串插值中，用括号将每个表达式包裹起来，并在括号前加反斜杠。</p>
+<blockquote>
+<p><em>String interpolations</em> are string literals that evaluate any included expressions and convert the results to string form. String interpolations give you an easy way to build a string from multiple pieces. Wrap each expression in a string interpolation in parentheses, prefixed by a backslash.</p>
+</blockquote>
+<pre><code class="language-swift">let name = &quot;Rosa&quot;
+let personalizedGreeting = &quot;Welcome, \\(name)!&quot;
+// personalizedGreeting == &quot;Welcome, Rosa!&quot;  
+
+let price = 2
+let number = 3
+let cookiePrice = &quot;\\(number) cookies: $\\(price * number).&quot;
+// cookiePrice == &quot;3 cookies: $6.&quot;
+</code></pre>
+<pre><code class="language-swift">let longerGreeting = greeting + &quot; We're glad you're here!&quot;
+// longerGreeting == &quot;Welcome! We're glad you're here!&quot;
+</code></pre>
+<p>Multiline string literals are enclosed in three double quotation marks ("""), with each delimiter on its own line. Indentation is stripped from each line of a multiline string literal to match the indentation of the closing delimiter.</p>
+<pre><code class="language-swift">let banner = &quot;&quot;&quot;
+          __,
+         (           o  /) _/_
+          `.  , , , ,  //  /
+        (___)(_(_/_(_ //_ (__
+                     /)
+                    (/
+        &quot;&quot;&quot;
+</code></pre>
+<h2 id="modifying-and-comparing-strings">Modifying and Comparing Strings</h2>
+<p>Strings always have value semantics. Modifying a copy of a string leaves the original unaffected.</p>
+<pre><code class="language-swift">var otherGreeting = greeting
+otherGreeting += &quot; Have a nice time!&quot;
+// otherGreeting == &quot;Welcome! Have a nice time!&quot;
+
+print(greeting)
+// Prints &quot;Welcome!&quot;
+</code></pre>
+<p>Comparing strings for equality using the equal-to operator (==) or a relational operator (like &lt; or &gt;=) is always performed using Unicode canonical representation. As a result, different representations of a string compare as being equal.</p>
+<pre><code class="language-swift">let cafe1 = &quot;Cafe\u{301}&quot;
+let cafe2 = &quot;Café&quot;
+print(cafe1 == cafe2)
+// Prints &quot;true&quot;
+</code></pre>
+<p>The Unicode scalar value "\u{301}" modifies the preceding character to include an accent, so "e\u{301}" has the same canonical representation as the single Unicode scalar value "é".
+Basic string operations are not sensitive to locale settings, ensuring that string comparisons and other operations always have a single, stable result, allowing strings to be used as keys in Dictionary instances and for other purposes.</p>
+<h2 id="accessing-string-elements">Accessing String Elements</h2>
+<p>A string is a collection of extended grapheme clusters, which approximate human-readable characters. Many individual characters, such as “é”, “김”, and “🇮🇳”, can be made up of multiple Unicode scalar values. These scalar values are combined by Unicode’s boundary algorithms into extended grapheme clusters, represented by the Swift Character type. Each element of a string is represented by a Character instance.
+For example, to retrieve the first word of a longer string, you can search for a space and then create a substring from a prefix of the string up to that point:</p>
+<pre><code class="language-swift">let name = &quot;Marie Curie&quot;
+let firstSpace = name.firstIndex(of: &quot; &quot;) ?? name.endIndex
+let firstName = name[..&lt;firstSpace]
+// firstName == &quot;Marie&quot;
+</code></pre>
+<p>The firstName constant is an instance of the Substring type—a type that represents substrings of a string while sharing the original string’s storage. Substrings present the same interface as strings.</p>
+<pre><code class="language-swift">print(&quot;\(name)'s first name has \(firstName.count) letters.&quot;)
+// Prints &quot;Marie Curie's first name has 5 letters.&quot;
+</code></pre>
+<h2 id="accessing-a-strings-unicode-representation">Accessing a String’s Unicode Representation</h2>
+<p>If you need to access the contents of a string as encoded in different Unicode encodings, use one of the string’s unicodeScalars, utf16, or utf8 properties. Each property provides access to a view of the string as a series of code units, each encoded in a different Unicode encoding.
+To demonstrate the different views available for every string, the following examples use this String instance:</p>
+<pre><code class="language-swift">let cafe = &quot;Cafe\u{301} du 🌍&quot;
+print(cafe)
+// Prints &quot;Café du 🌍&quot;
+</code></pre>
+<p>The cafe string is a collection of the nine characters that are visible when the string is displayed.</p>
+<pre><code class="language-swift">print(cafe.count)
+// Prints &quot;9&quot;
+print(Array(cafe))
+// Prints &quot;[&quot;C&quot;, &quot;a&quot;, &quot;f&quot;, &quot;é&quot;, &quot; &quot;, &quot;d&quot;, &quot;u&quot;, &quot; &quot;, &quot;🌍&quot;]&quot;
+</code></pre>
+<h2 id="unicode-scalar-view">Unicode Scalar View</h2>
+<p>A string’s unicodeScalars property is a collection of Unicode scalar values, the 21-bit codes that are the basic unit of Unicode. Each scalar value is represented by a Unicode.Scalar instance and is equivalent to a UTF-32 code unit.</p>
+<pre><code class="language-swift">print(cafe.unicodeScalars.count)
+// Prints &quot;10&quot;
+print(Array(cafe.unicodeScalars))
+// Prints &quot;[&quot;C&quot;, &quot;a&quot;, &quot;f&quot;, &quot;e&quot;, &quot;\u{0301}&quot;, &quot; &quot;, &quot;d&quot;, &quot;u&quot;, &quot; &quot;, &quot;\u{0001F30D}&quot;]&quot;
+print(cafe.unicodeScalars.map { $0.value })
+// Prints &quot;[67, 97, 102, 101, 769, 32, 100, 117, 32, 127757]&quot;
+</code></pre>
+<p>The unicodeScalars view’s elements comprise each Unicode scalar value in the cafe string. In particular, because cafe was declared using the decomposed form of the "é" character, unicodeScalars contains the scalar values for both the letter "e" (101) and the accent character "´" (769).</p>
+<h2 id="utf-16-view">UTF-16 View</h2>
+<p>A string’s utf16 property is a collection of UTF-16 code units, the 16-bit encoding form of the string’s Unicode scalar values. Each code unit is stored as a UInt16 instance.</p>
+<pre><code class="language-swift">print(cafe.utf16.count)
+// Prints &quot;11&quot;
+print(Array(cafe.utf16))
+// Prints &quot;[67, 97, 102, 101, 769, 32, 100, 117, 32, 55356, 57101]&quot;
+</code></pre>
+<p>The elements of the utf16 view are the code units for the string when encoded in UTF-16. These elements match those accessed through indexed NSString APIs.</p>
+<pre><code class="language-swift">let nscafe = cafe as NSString
+print(nscafe.length)
+// Prints &quot;11&quot;
+print(nscafe.character(at: 3))
+// Prints &quot;101&quot;
+</code></pre>
+<h2 id="utf-8-view">UTF-8 View</h2>
+<p>A string’s utf8 property is a collection of UTF-8 code units, the 8-bit encoding form of the string’s Unicode scalar values. Each code unit is stored as a UInt8 instance.</p>
+<pre><code class="language-swift">print(cafe.utf8.count)
+// Prints &quot;14&quot;
+print(Array(cafe.utf8))
+// Prints &quot;[67, 97, 102, 101, 204, 129, 32, 100, 117, 32, 240, 159, 140, 141]&quot;
+</code></pre>
+<p>The elements of the utf8 view are the code units for the string when encoded in UTF-8. This representation matches the one used when String instances are passed to C APIs.</p>
+<pre><code class="language-swift">let cLength = strlen(cafe)
+print(cLength)
+// Prints &quot;14&quot;
+</code></pre>
+<p>Measuring the Length of a String
+When you need to know the length of a string, you must first consider what you’ll use the length for. Are you measuring the number of characters that will be displayed on the screen, or are you measuring the amount of storage needed for the string in a particular encoding? A single string can have greatly differing lengths when measured by its different views.
+For example, an ASCII character like the capital letter A is represented by a single element in each of its four views. The Unicode scalar value of A is 65, which is small enough to fit in a single code unit in both UTF-16 and UTF-8.</p>
+<pre><code class="language-swift">let capitalA = &quot;A&quot;
+print(capitalA.count)
+// Prints &quot;1&quot;
+print(capitalA.unicodeScalars.count)
+// Prints &quot;1&quot;
+print(capitalA.utf16.count)
+// Prints &quot;1&quot;
+print(capitalA.utf8.count)
+// Prints &quot;1&quot;
+</code></pre>
+<p>On the other hand, an emoji flag character is constructed from a pair of Unicode scalar values, like "\u{1F1F5}" and "\u{1F1F7}". Each of these scalar values, in turn, is too large to fit into a single UTF-16 or UTF-8 code unit. As a result, each view of the string "🇵🇷" reports a different length.</p>
+<pre><code class="language-swift">let flag = &quot;🇵🇷&quot;
+print(flag.count)
+// Prints &quot;1&quot;
+print(flag.unicodeScalars.count)
+// Prints &quot;2&quot;
+print(flag.utf16.count)
+// Prints &quot;4&quot;
+print(flag.utf8.count)
+// Prints &quot;8&quot;
+</code></pre>
+<p>To check whether a string is empty, use its isEmpty property instead of comparing the length of one of the views to 0. Unlike with isEmpty, calculating a view’s count property requires iterating through the elements of the string.</p>
+<h2 id="accessing-string-view-elements">Accessing String View Elements</h2>
+<p>To find individual elements of a string, use the appropriate view for your task. For example, to retrieve the first word of a longer string, you can search the string for a space and then create a new string from a prefix of the string up to that point.</p>
+<pre><code class="language-swift">let name = &quot;Marie Curie&quot;
+let firstSpace = name.firstIndex(of: &quot; &quot;) ?? name.endIndex
+let firstName = name[..&lt;firstSpace]
+print(firstName)
+// Prints &quot;Marie&quot;
+</code></pre>
+<p>Strings and their views share indices, so you can access the UTF-8 view of the name string using the same firstSpace index.</p>
+<pre><code class="language-swift">print(Array(name.utf8[..&lt;firstSpace]))
+// Prints &quot;[77, 97, 114, 105, 101]&quot;
+</code></pre>
+<p>Note that an index into one view may not have an exact corresponding position in another view. For example, the flag string declared above comprises a single character, but is composed of eight code units when encoded as UTF-8. The following code creates constants for the first and second positions in the flag.utf8 view. Accessing the utf8 view with these indices yields the first and second code UTF-8 units.</p>
+<pre><code class="language-swift">let firstCodeUnit = flag.startIndex
+let secondCodeUnit = flag.utf8.index(after: firstCodeUnit)
+// flag.utf8[firstCodeUnit] == 240
+// flag.utf8[secondCodeUnit] == 159
+</code></pre>
+<p>When used to access the elements of the flag string itself, however, the secondCodeUnit index does not correspond to the position of a specific character. Instead of only accessing the specific UTF-8 code unit, that index is treated as the position of the character at the index’s encoded offset. In the case of secondCodeUnit, that character is still the flag itself.</p>
+<pre><code class="language-swift">// flag[firstCodeUnit] == &quot;🇵🇷&quot;
+// flag[secondCodeUnit] == &quot;🇵🇷&quot;
+</code></pre>
+<p>If you need to validate that an index from one string’s view corresponds with an exact position in another view, use the index’s samePosition(in:) method or the <code>init(_:within:)</code> initializer.</p>
+<pre><code class="language-swift">if let exactIndex = secondCodeUnit.samePosition(in: flag) {
+    print(flag[exactIndex])
+} else {
+    print(&quot;No exact match for this position.&quot;)
+}
+// Prints &quot;No exact match for this position.&quot;
+</code></pre>
+<h2 id="performance-optimizations">Performance Optimizations</h2>
+<p>Although strings in Swift have value semantics, strings use a copy-on-write strategy to store their data in a buffer. This buffer can then be shared by different copies of a string. A string’s data is only copied lazily, upon mutation, when more than one string instance is using the same buffer. Therefore, the first in any sequence of mutating operations may cost O(n) time and space.
+When a string’s contiguous storage fills up, a new buffer must be allocated and data must be moved to the new storage. String buffers use an exponential growth strategy that makes appending to a string a constant time operation when averaged over many append operations.</p>
+<h2 id="bridging-between-string-and-nsstring">Bridging Between String and NSString</h2>
+<p>Any String instance can be bridged to NSString using the type-cast operator (as), and any String instance that originates in Objective-C may use an NSString instance as its storage. Because any arbitrary subclass of NSString can become a String instance, there are no guarantees about representation or efficiency when a String instance is backed by NSString storage. Because NSString is immutable, it is just as though the storage was shared by a copy. The first in any sequence of mutating operations causes elements to be copied into unique, contiguous storage which may cost O(n) time and space, where n is the length of the string’s encoded representation (or more, if the underlying NSString has unusual performance characteristics).
+For more information about the Unicode terms used in this discussion, see the Unicode.org glossary. In particular, this discussion mentions extended grapheme clusters, Unicode scalar values, and canonical equivalence.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../2.%E6%B5%AE%E7%82%B9%E6%95%B0-Double/2.%E6%B5%AE%E7%82%B9%E6%95%B0-Double/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                浮点数-Double
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../4.%E6%95%B0%E7%BB%84-Array/4.%E6%95%B0%E7%BB%84-Array/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                数组-Array
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../../assets/javascripts/worker/search.8c7e0a7e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

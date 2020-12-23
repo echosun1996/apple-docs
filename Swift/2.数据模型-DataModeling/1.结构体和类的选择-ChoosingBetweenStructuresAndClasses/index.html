@@ -1,0 +1,1390 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.2">
+    
+    
+      
+        <title>结构体和类的选择-Choosing Between Structures and Classes - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.73f7c429.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#-choosing-between-structures-and-classes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="My Docs" class="md-header-nav__button md-logo" aria-label="My Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              结构体和类的选择-Choosing Between Structures and Classes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../.." class="md-nav__link">
+      apple文档翻译计划
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../instruction/" class="md-nav__link">
+      说明
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Swift
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Swift" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Swift
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../0.swift%E6%96%87%E6%A1%A3%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+      swift文档说明
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2" >
+    
+    <label class="md-nav__link" for="nav-3-2">
+      1.标准库 StandardLibrary
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.标准库 StandardLibrary" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        <span class="md-nav__icon md-icon"></span>
+        1.标准库 StandardLibrary
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-1" type="checkbox" id="nav-3-2-1" >
+    
+    <label class="md-nav__link" for="nav-3-2-1">
+      1.整数 Int
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.整数 Int" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-1">
+        <span class="md-nav__icon md-icon"></span>
+        1.整数 Int
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../1.%E6%A0%87%E5%87%86%E5%BA%93-StandardLibrary/1.%E6%95%B4%E6%95%B0-Int/1.%E6%95%B4%E6%95%B0-Int/" class="md-nav__link">
+      1.整数-Int
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-2" type="checkbox" id="nav-3-2-2" >
+    
+    <label class="md-nav__link" for="nav-3-2-2">
+      2.浮点数 Double
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="2.浮点数 Double" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        2.浮点数 Double
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../1.%E6%A0%87%E5%87%86%E5%BA%93-StandardLibrary/2.%E6%B5%AE%E7%82%B9%E6%95%B0-Double/2.%E6%B5%AE%E7%82%B9%E6%95%B0-Double/" class="md-nav__link">
+      浮点数-Double
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-3" type="checkbox" id="nav-3-2-3" >
+    
+    <label class="md-nav__link" for="nav-3-2-3">
+      3.字符串 String
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="3.字符串 String" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-3">
+        <span class="md-nav__icon md-icon"></span>
+        3.字符串 String
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../1.%E6%A0%87%E5%87%86%E5%BA%93-StandardLibrary/3.%E5%AD%97%E7%AC%A6%E4%B8%B2-String/3.%E5%AD%97%E7%AC%A6%E4%B8%B2-String/" class="md-nav__link">
+      字符串-String
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-4" type="checkbox" id="nav-3-2-4" >
+    
+    <label class="md-nav__link" for="nav-3-2-4">
+      4.数组 Array
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="4.数组 Array" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-4">
+        <span class="md-nav__icon md-icon"></span>
+        4.数组 Array
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../1.%E6%A0%87%E5%87%86%E5%BA%93-StandardLibrary/4.%E6%95%B0%E7%BB%84-Array/4.%E6%95%B0%E7%BB%84-Array/" class="md-nav__link">
+      数组-Array
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-5" type="checkbox" id="nav-3-2-5" >
+    
+    <label class="md-nav__link" for="nav-3-2-5">
+      5.字典 Dictionary
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="5.字典 Dictionary" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-5">
+        <span class="md-nav__icon md-icon"></span>
+        5.字典 Dictionary
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../1.%E6%A0%87%E5%87%86%E5%BA%93-StandardLibrary/5.%E5%AD%97%E5%85%B8-Dictionary/5.%E5%AD%97%E5%85%B8-Dictionary/" class="md-nav__link">
+      字典-Dictionary.md
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" checked>
+    
+    <label class="md-nav__link" for="nav-3-3">
+      2.数据模型 DataModeling
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="2.数据模型 DataModeling" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        <span class="md-nav__icon md-icon"></span>
+        2.数据模型 DataModeling
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        结构体和类的选择-Choosing Between Structures and Classes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      结构体和类的选择-Choosing Between Structures and Classes
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    概述
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    默认使用结构体
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objective-c" class="md-nav__link">
+    当你需要Objective-C的互操作性时，请使用类。
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    当你需要身份控制时，请使用类
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    当你不需要身份控制时，请使用结构体
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    使用结构体和协议来模拟继承和共享行为
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../2.%E9%87%87%E7%94%A8%E5%85%B1%E5%90%8C%E5%8D%8F%E8%AE%AE-AdoptingCommonProtocols/" class="md-nav__link">
+      采用共同协议-AdoptingCommonProtocols
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    
+    <label class="md-nav__link" for="nav-4">
+      SwiftUI
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="SwiftUI" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        SwiftUI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../SwiftUI/0.swift%E6%96%87%E6%A1%A3%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+      swift文档说明
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" >
+    
+    <label class="md-nav__link" for="nav-4-2">
+      1.必需 Essentials
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.必需 Essentials" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        <span class="md-nav__icon md-icon"></span>
+        1.必需 Essentials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-1" type="checkbox" id="nav-4-2-1" >
+    
+    <label class="md-nav__link" for="nav-4-2-1">
+      1.SwiftUI介绍 IntroducingSwiftUI
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.SwiftUI介绍 IntroducingSwiftUI" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2-1">
+        <span class="md-nav__icon md-icon"></span>
+        1.SwiftUI介绍 IntroducingSwiftUI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-1-1" type="checkbox" id="nav-4-2-1-1" >
+    
+    <label class="md-nav__link" for="nav-4-2-1-1">
+      1.SwiftUI基本件 SwiftUIEssentials
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.SwiftUI基本件 SwiftUIEssentials" data-md-level="4">
+      <label class="md-nav__title" for="nav-4-2-1-1">
+        <span class="md-nav__icon md-icon"></span>
+        1.SwiftUI基本件 SwiftUIEssentials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../SwiftUI/1.%E5%BF%85%E9%9C%80-Essentials/1.SwiftUI%E4%BB%8B%E7%BB%8D-IntroducingSwiftUI/1.SwiftUI%E5%9F%BA%E6%9C%AC%E4%BB%B6-SwiftUIEssentials/1.%E5%88%9B%E5%BB%BA%E5%B9%B6%E7%BB%84%E5%90%88%E8%A7%86%E5%9B%BE-CreatingAndCombiningViews/" class="md-nav__link">
+      创建并组合视图-CreatingAndCombiningViews
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../SwiftUI/1.%E5%BF%85%E9%9C%80-Essentials/1.SwiftUI%E4%BB%8B%E7%BB%8D-IntroducingSwiftUI/1.SwiftUI%E5%9F%BA%E6%9C%AC%E4%BB%B6-SwiftUIEssentials/2.%E6%9E%84%E5%BB%BA%E5%88%97%E8%A1%A8%E5%92%8C%E5%AF%BC%E8%88%AA-BuildingListsAndNavigation/" class="md-nav__link">
+      构建列表和导航-BuildingListsAndNavigation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../SwiftUI/1.%E5%BF%85%E9%9C%80-Essentials/1.SwiftUI%E4%BB%8B%E7%BB%8D-IntroducingSwiftUI/1.SwiftUI%E5%9F%BA%E6%9C%AC%E4%BB%B6-SwiftUIEssentials/3.%E5%A4%84%E7%90%86%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5-HandlingUserInput/" class="md-nav__link">
+      处理用户输入-HandlingUserInput
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-1-2" type="checkbox" id="nav-4-2-1-2" >
+    
+    <label class="md-nav__link" for="nav-4-2-1-2">
+      4.框架集成 FrameworkIntegration
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="4.框架集成 FrameworkIntegration" data-md-level="4">
+      <label class="md-nav__title" for="nav-4-2-1-2">
+        <span class="md-nav__icon md-icon"></span>
+        4.框架集成 FrameworkIntegration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../SwiftUI/1.%E5%BF%85%E9%9C%80-Essentials/1.SwiftUI%E4%BB%8B%E7%BB%8D-IntroducingSwiftUI/4.%E6%A1%86%E6%9E%B6%E9%9B%86%E6%88%90-FrameworkIntegration/1.%E7%BB%93%E5%90%88UIKit-InterfacingWithUIKit/" class="md-nav__link">
+      结合UIKit-InterfacingWithUIKit
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-2" type="checkbox" id="nav-4-2-2" >
+    
+    <label class="md-nav__link" for="nav-4-2-2">
+      2.APP结构和行为 App Structure and Behavior
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="2.APP结构和行为 App Structure and Behavior" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        2.APP结构和行为 App Structure and Behavior
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../SwiftUI/1.%E5%BF%85%E9%9C%80-Essentials/2.APP%E7%BB%93%E6%9E%84%E5%92%8C%E8%A1%8C%E4%B8%BA-App%20Structure%20and%20Behavior/0.APP%E7%BB%93%E6%9E%84%E5%92%8C%E8%A1%8C%E4%B8%BA-App%20Structure%20and%20Behavior/" class="md-nav__link">
+      0.APP结构和行为-App Structure and Behavior
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-2-2" type="checkbox" id="nav-4-2-2-2" >
+    
+    <label class="md-nav__link" for="nav-4-2-2-2">
+      1.必需 Essentials
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.必需 Essentials" data-md-level="4">
+      <label class="md-nav__title" for="nav-4-2-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        1.必需 Essentials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../SwiftUI/1.%E5%BF%85%E9%9C%80-Essentials/2.APP%E7%BB%93%E6%9E%84%E5%92%8C%E8%A1%8C%E4%B8%BA-App%20Structure%20and%20Behavior/1.%E5%BF%85%E9%9C%80-Essentials/1.App/" class="md-nav__link">
+      App
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" >
+    
+    <label class="md-nav__link" for="nav-4-3">
+      4.在Xcode中预览 PreviewsInXcode
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="4.在Xcode中预览 PreviewsInXcode" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        <span class="md-nav__icon md-icon"></span>
+        4.在Xcode中预览 PreviewsInXcode
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3-1" type="checkbox" id="nav-4-3-1" >
+    
+    <label class="md-nav__link" for="nav-4-3-1">
+      1.预览 Previews
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.预览 Previews" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-1">
+        <span class="md-nav__icon md-icon"></span>
+        1.预览 Previews
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../SwiftUI/4.%E5%9C%A8Xcode%E4%B8%AD%E9%A2%84%E8%A7%88-PreviewsInXcode/1.%E9%A2%84%E8%A7%88-Previews/0.%E9%A2%84%E8%A7%88-Previews/" class="md-nav__link">
+      0.预览 Previews
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3-1-2" type="checkbox" id="nav-4-3-1-2" >
+    
+    <label class="md-nav__link" for="nav-4-3-1-2">
+      1.创建预览 PreviewCreation
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.创建预览 PreviewCreation" data-md-level="4">
+      <label class="md-nav__title" for="nav-4-3-1-2">
+        <span class="md-nav__icon md-icon"></span>
+        1.创建预览 PreviewCreation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3-1-2-1" type="checkbox" id="nav-4-3-1-2-1" >
+    
+    <label class="md-nav__link" for="nav-4-3-1-2-1">
+      1.预览提供者 PreviewProvider
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.预览提供者 PreviewProvider" data-md-level="5">
+      <label class="md-nav__title" for="nav-4-3-1-2-1">
+        <span class="md-nav__icon md-icon"></span>
+        1.预览提供者 PreviewProvider
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../SwiftUI/4.%E5%9C%A8Xcode%E4%B8%AD%E9%A2%84%E8%A7%88-PreviewsInXcode/1.%E9%A2%84%E8%A7%88-Previews/1.%E5%88%9B%E5%BB%BA%E9%A2%84%E8%A7%88-PreviewCreation/1.%E9%A2%84%E8%A7%88%E6%8F%90%E4%BE%9B%E8%80%85-PreviewProvider/0.%E9%A2%84%E8%A7%88%E6%8F%90%E4%BE%9B%E8%80%85-PreviewProvider/" class="md-nav__link">
+      预览提供者-PreviewProvider
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3-1-2-1-2" type="checkbox" id="nav-4-3-1-2-1-2" >
+    
+    <label class="md-nav__link" for="nav-4-3-1-2-1-2">
+      1.设置类型 SettingTheType
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.设置类型 SettingTheType" data-md-level="6">
+      <label class="md-nav__title" for="nav-4-3-1-2-1-2">
+        <span class="md-nav__icon md-icon"></span>
+        1.设置类型 SettingTheType
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../SwiftUI/4.%E5%9C%A8Xcode%E4%B8%AD%E9%A2%84%E8%A7%88-PreviewsInXcode/1.%E9%A2%84%E8%A7%88-Previews/1.%E5%88%9B%E5%BB%BA%E9%A2%84%E8%A7%88-PreviewCreation/1.%E9%A2%84%E8%A7%88%E6%8F%90%E4%BE%9B%E8%80%85-PreviewProvider/1.%E8%AE%BE%E7%BD%AE%E7%B1%BB%E5%9E%8B-SettingTheType/1.Previews/" class="md-nav__link">
+      1.Previews
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3-1-2-1-3" type="checkbox" id="nav-4-3-1-2-1-3" >
+    
+    <label class="md-nav__link" for="nav-4-3-1-2-1-3">
+      2.生成预览者 GeneratingPreviews
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="2.生成预览者 GeneratingPreviews" data-md-level="6">
+      <label class="md-nav__title" for="nav-4-3-1-2-1-3">
+        <span class="md-nav__icon md-icon"></span>
+        2.生成预览者 GeneratingPreviews
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../SwiftUI/4.%E5%9C%A8Xcode%E4%B8%AD%E9%A2%84%E8%A7%88-PreviewsInXcode/1.%E9%A2%84%E8%A7%88-Previews/1.%E5%88%9B%E5%BB%BA%E9%A2%84%E8%A7%88-PreviewCreation/1.%E9%A2%84%E8%A7%88%E6%8F%90%E4%BE%9B%E8%80%85-PreviewProvider/2.%E7%94%9F%E6%88%90%E9%A2%84%E8%A7%88%E8%80%85-GeneratingPreviews/1.platform/" class="md-nav__link">
+      1.platform
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../SwiftUI/4.%E5%9C%A8Xcode%E4%B8%AD%E9%A2%84%E8%A7%88-PreviewsInXcode/1.%E9%A2%84%E8%A7%88-Previews/1.%E5%88%9B%E5%BB%BA%E9%A2%84%E8%A7%88-PreviewCreation/1.%E9%A2%84%E8%A7%88%E6%8F%90%E4%BE%9B%E8%80%85-PreviewProvider/2.%E7%94%9F%E6%88%90%E9%A2%84%E8%A7%88%E8%80%85-GeneratingPreviews/2.previews/" class="md-nav__link">
+      2.previews
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    概述
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    默认使用结构体
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objective-c" class="md-nav__link">
+    当你需要Objective-C的互操作性时，请使用类。
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    当你需要身份控制时，请使用类
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    当你不需要身份控制时，请使用结构体
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    使用结构体和协议来模拟继承和共享行为
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="-choosing-between-structures-and-classes">结构体和类的选择-Choosing Between Structures and Classes</h1>
+<p>决定如何存储数据和模型的行为。</p>
+<blockquote>
+<p>Decide how to store data and model behavior.</p>
+</blockquote>
+<h2 id="_1">概述</h2>
+<p>结构体和类是在应用程序中存储数据和建模行为的好选择，但它们的相似性可能会让你很难选择。</p>
+<blockquote>
+<p>Structures and classes are good choices for storing data and modeling behavior in your apps, but their similarities can make it difficult to choose one over the other.</p>
+</blockquote>
+<p>在向您的应用程序添加新数据类型时考虑以下建议，能够帮助您做出合理的选择。</p>
+<ul>
+<li>默认使用结构体</li>
+<li>当你需要Objective-C的互操作性时，请使用类。</li>
+<li>当你需要控制你正在建模的数据的身份时，请使用类。</li>
+</ul>
+<blockquote>
+<p>Consider the following recommendations to help choose which option makes sense when adding a new data type to your app.</p>
+<ul>
+<li>
+<p>Use structures by default.</p>
+</li>
+<li>
+<p>Use classes when you need Objective-C interoperability.</p>
+</li>
+<li>
+<p>Use classes when you need to control the identity of the data you're modeling.</p>
+</li>
+</ul>
+</blockquote>
+<h2 id="_2">默认使用结构体</h2>
+<p>使用结构体来表示常见的数据种类。Swift中的结构体包含了许多在其他语言中仅限于类的功能：它可以包括存储属性、计算属性和方法。此外，Swift的结构体可以采用协议，通过默认实现（default implementations）来获得行为。在Swift标准库和Foundation中，您经常使用的类型都是结构体，如数字、字符串、数组和字典。</p>
+<blockquote>
+<p>Use structures to represent common kinds of data. Structures in Swift include many features that are limited to classes in other languages: They can include stored properties, computed properties, and methods. Moreover, Swift structures can adopt protocols to gain behavior through default implementations. The Swift standard library and Foundation use structures for types you use frequently, such as numbers, strings, arrays, and dictionaries.</p>
+</blockquote>
+<p>使用结构体可以更容易地对一段代码进行推理，而不需要考虑应用程序的整体状态。因为结构体是值类型——与类不同——对结构体的局部更改对应用程序的其他部分是不可见的，除非您有意暴露这些更改，作为应用程序流程的一部分。因此，您可以查看一段代码，并更有信心对该部分的实例进行明确的更改，而不是从一个相关的函数调用中隐形地进行更改。</p>
+<blockquote>
+<p>Using structures makes it easier to reason about a portion of your code without needing to consider the whole state of your app. Because structures are value types—unlike classes—local changes to a structure aren't visible to the rest of your app unless you intentionally communicate those changes as part of the flow of your app. As a result, you can look at a section of code and be more confident that changes to instances in that section will be made explicitly, rather than being made invisibly from a tangentially related function call.</p>
+</blockquote>
+<h2 id="objective-c">当你需要Objective-C的互操作性时，请使用类。</h2>
+<p>如果你使用一个需要处理数据的Objective-C API，或者你需要将你的数据模型适合于Objective-C框架中定义的现有类层次结构，你可能需要使用类和类继承来对你的数据进行建模。例如，许多Objective-C框架都暴露了你所需子类的类。</p>
+<blockquote>
+<p>If you use an Objective-C API that needs to process your data, or you need to fit your data model into an existing class hierarchy defined in an Objective-C framework, you might need to use classes and class inheritance to model your data. For example, many Objective-C frameworks expose classes that you are expected to subclass.</p>
+</blockquote>
+<h2 id="_3">当你需要身份控制时，请使用类</h2>
+<p>Swift中的类因为是引用类型，所以带有内置的身份概念。这意味着，当两个不同的类实例，即便各存储属性的值对应相同，它们仍然被身份操作符（===）认为是不同的。这也意味着，当你在你的应用程序中共享一个类实例时，你对该实例所做的更改对你的代码中持有该实例引用的每一部分都是可见的。当你需要你的实例具有这种身份时，请使用类。常见的用例是文件句柄、网络连接和像CBCentralManager这样的共享硬件中介。</p>
+<blockquote>
+<p>Classes in Swift come with a built-in notion of identity because they're reference types. This means that when two different class instances have the same value for each of their stored properties, they're still considered to be different by the identity operator (===). It also means that when you share a class instance across your app, changes you make to that instance are visible to every part of your code that holds a reference to that instance. Use classes when you need your instances to have this kind of identity. Common use cases are file handles, network connections, and shared hardware intermediaries like CBCentralManager.</p>
+</blockquote>
+<p>例如，如果你有一个代表本地数据库连接的类型，那么在你的应用程序中，管理访问该数据库的代码需要能够完全控制数据库的状态。在这种情况下，使用一个类是合适的，但一定要限制你的应用程序的哪些部分可以访问共享数据库对象。</p>
+<blockquote>
+<p>For example, if you have a type that represents a local database connection, the code that manages access to that database needs full control over the state of the database as viewed from your app. It's appropriate to use a class in this case, but be sure to limit which parts of your app get access to the shared database object.</p>
+</blockquote>
+<p><strong>重要</strong>  </p>
+<p>谨慎对待身份。在整个应用中经常共享类实例会增大逻辑错误出现的可能性。你可能无法预料到改变一个大量共享实例的后果，所以要正确地写出这样的代码是比较辛苦的。</p>
+<blockquote>
+<p><strong>Important</strong><br />
+Treat identity with care. Sharing class instances pervasively throughout an app makes logic errors more likely. You might not anticipate the consequences of changing a heavily shared instance, so it's more work to write such code correctly.</p>
+</blockquote>
+<h2 id="_4">当你不需要身份控制时，请使用结构体</h2>
+<p>对含有您不想控制身份的实体进行建模时，请使用结构体。</p>
+<blockquote>
+<p>Use structures when you're modeling data that contains information about an entity with an identity that you don't control.</p>
+</blockquote>
+<p>例如，在一个查询远程数据库的应用程序中，一个实例的身份可能完全由外部实体拥有，并通过标识符进行通信。如果一个应用程序的模型一致性存储在服务器上，您可以将这个记录建模成带有标识符的结构体。在下面的例子中，jsonResponse包含一个由服务器编码的PenPalRecord实例。</p>
+<blockquote>
+<p>In an app that consults a remote database, for example, an instance's identity may be fully owned by an external entity and communicated by an identifier. If the consistency of an app's models is stored on a server, you can model records as structures with identifiers. In the example below, jsonResponse contains an encoded PenPalRecord instance from a server:</p>
+</blockquote>
+<pre><code class="language-swift">struct PenPalRecord {
+    let myID: Int
+    var myNickname: String
+    var recommendedPenPalID: Int
+}
+
+var myRecord = try JSONDecoder().decode(PenPalRecord.self, from: jsonResponse)
+</code></pre>
+<p>像PenPalRecord这样的模型类型的本地更改是有用的。例如，一个应用程序可能会根据用户反馈推荐多个不同的笔友。因为PenPalRecord结构体并不控制底层数据库记录的身份，所以对本地PenPalRecord实例进行更改不会意外改变数据库中的值。</p>
+<blockquote>
+<p>Local changes to model types like PenPalRecord are useful. For example, an app might recommend multiple different penpals in response to user feedback. Because the PenPalRecord structure doesn't control the identity of the underlying database records, there's no risk that the changes made to local PenPalRecord instances accidentally change values in the database.</p>
+</blockquote>
+<p>如果应用程序的另一部分更改了myNickname，并向服务器提交了更改请求，那么最后一次笔友推荐的拒绝就不会因为本次的更改而被错误地接受。因为myID属性被声明为常量，所以它无法被修改。因此，对数据库的请求不会意外地改错记录。</p>
+<blockquote>
+<p>If another part of the app changes myNickname and submits a change request back to the server, the most recently rejected penpal recommendation won't be mistakenly picked up by the change. Because the myID property is declared as a constant, it can't change locally. As a result, requests to the database won't accidentally change the wrong record.</p>
+</blockquote>
+<h2 id="_5">使用结构体和协议来模拟继承和共享行为</h2>
+<p>结构体和类都支持一种形式的继承。结构体和协议只能采用协议来继承，它们不能从类继承。然而，你可以用类继承来建立的那种继承层次，也可以用协议继承和结构体来建模。</p>
+<blockquote>
+<p>Structures and classes both support a form of inheritance. Structures and protocols can only adopt protocols; they can't inherit from classes. However, the kinds of inheritance hierarchies you can build with class inheritance can be also modeled using protocol inheritance and structures.</p>
+</blockquote>
+<p>如果你要从头开始建立继承关系，最好使用协议继承。协议允许类、结构体和枚举参与继承，而类继承只与其他类兼容。当你在选择如何对数据进行建模时，先尝试使用协议继承来构建数据类型的层次结构，然后在结构体中采用这些协议。</p>
+<blockquote>
+<p>If you're building an inheritance relationship from scratch, prefer protocol inheritance. Protocols permit classes, structures, and enumerations to participate in inheritance, while class inheritance is only compatible with other classes. When you're choosing how to model your data, try building the hierarchy of data types using protocol inheritance first, then adopt those protocols in your structures.</p>
+</blockquote>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../1.%E6%A0%87%E5%87%86%E5%BA%93-StandardLibrary/5.%E5%AD%97%E5%85%B8-Dictionary/5.%E5%AD%97%E5%85%B8-Dictionary/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                字典-Dictionary.md
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../2.%E9%87%87%E7%94%A8%E5%85%B1%E5%90%8C%E5%8D%8F%E8%AE%AE-AdoptingCommonProtocols/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                采用共同协议-AdoptingCommonProtocols
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.8c7e0a7e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

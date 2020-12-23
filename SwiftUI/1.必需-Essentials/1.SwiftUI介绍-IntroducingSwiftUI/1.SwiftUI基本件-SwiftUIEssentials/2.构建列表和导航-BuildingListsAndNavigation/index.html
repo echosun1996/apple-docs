@@ -1,0 +1,1888 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.2">
+    
+    
+      
+        <title>构建列表和导航-BuildingListsAndNavigation - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.73f7c429.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#-buildinglistsandnavigation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../../../.." title="My Docs" class="md-header-nav__button md-logo" aria-label="My Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              构建列表和导航-BuildingListsAndNavigation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../.." class="md-nav__link">
+      apple文档翻译计划
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../instruction/" class="md-nav__link">
+      说明
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    
+    <label class="md-nav__link" for="nav-3">
+      Swift
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Swift" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Swift
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../Swift/0.swift%E6%96%87%E6%A1%A3%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+      swift文档说明
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2" >
+    
+    <label class="md-nav__link" for="nav-3-2">
+      1.标准库 StandardLibrary
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.标准库 StandardLibrary" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        <span class="md-nav__icon md-icon"></span>
+        1.标准库 StandardLibrary
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-1" type="checkbox" id="nav-3-2-1" >
+    
+    <label class="md-nav__link" for="nav-3-2-1">
+      1.整数 Int
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.整数 Int" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-1">
+        <span class="md-nav__icon md-icon"></span>
+        1.整数 Int
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../Swift/1.%E6%A0%87%E5%87%86%E5%BA%93-StandardLibrary/1.%E6%95%B4%E6%95%B0-Int/1.%E6%95%B4%E6%95%B0-Int/" class="md-nav__link">
+      1.整数-Int
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-2" type="checkbox" id="nav-3-2-2" >
+    
+    <label class="md-nav__link" for="nav-3-2-2">
+      2.浮点数 Double
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="2.浮点数 Double" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        2.浮点数 Double
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../Swift/1.%E6%A0%87%E5%87%86%E5%BA%93-StandardLibrary/2.%E6%B5%AE%E7%82%B9%E6%95%B0-Double/2.%E6%B5%AE%E7%82%B9%E6%95%B0-Double/" class="md-nav__link">
+      浮点数-Double
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-3" type="checkbox" id="nav-3-2-3" >
+    
+    <label class="md-nav__link" for="nav-3-2-3">
+      3.字符串 String
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="3.字符串 String" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-3">
+        <span class="md-nav__icon md-icon"></span>
+        3.字符串 String
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../Swift/1.%E6%A0%87%E5%87%86%E5%BA%93-StandardLibrary/3.%E5%AD%97%E7%AC%A6%E4%B8%B2-String/3.%E5%AD%97%E7%AC%A6%E4%B8%B2-String/" class="md-nav__link">
+      字符串-String
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-4" type="checkbox" id="nav-3-2-4" >
+    
+    <label class="md-nav__link" for="nav-3-2-4">
+      4.数组 Array
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="4.数组 Array" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-4">
+        <span class="md-nav__icon md-icon"></span>
+        4.数组 Array
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../Swift/1.%E6%A0%87%E5%87%86%E5%BA%93-StandardLibrary/4.%E6%95%B0%E7%BB%84-Array/4.%E6%95%B0%E7%BB%84-Array/" class="md-nav__link">
+      数组-Array
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-5" type="checkbox" id="nav-3-2-5" >
+    
+    <label class="md-nav__link" for="nav-3-2-5">
+      5.字典 Dictionary
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="5.字典 Dictionary" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-5">
+        <span class="md-nav__icon md-icon"></span>
+        5.字典 Dictionary
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../Swift/1.%E6%A0%87%E5%87%86%E5%BA%93-StandardLibrary/5.%E5%AD%97%E5%85%B8-Dictionary/5.%E5%AD%97%E5%85%B8-Dictionary/" class="md-nav__link">
+      字典-Dictionary.md
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" >
+    
+    <label class="md-nav__link" for="nav-3-3">
+      2.数据模型 DataModeling
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="2.数据模型 DataModeling" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        <span class="md-nav__icon md-icon"></span>
+        2.数据模型 DataModeling
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../Swift/2.%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B-DataModeling/1.%E7%BB%93%E6%9E%84%E4%BD%93%E5%92%8C%E7%B1%BB%E7%9A%84%E9%80%89%E6%8B%A9-ChoosingBetweenStructuresAndClasses/" class="md-nav__link">
+      结构体和类的选择-Choosing Between Structures and Classes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../Swift/2.%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B-DataModeling/2.%E9%87%87%E7%94%A8%E5%85%B1%E5%90%8C%E5%8D%8F%E8%AE%AE-AdoptingCommonProtocols/" class="md-nav__link">
+      采用共同协议-AdoptingCommonProtocols
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      SwiftUI
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="SwiftUI" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        SwiftUI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../0.swift%E6%96%87%E6%A1%A3%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+      swift文档说明
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" checked>
+    
+    <label class="md-nav__link" for="nav-4-2">
+      1.必需 Essentials
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.必需 Essentials" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        <span class="md-nav__icon md-icon"></span>
+        1.必需 Essentials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-1" type="checkbox" id="nav-4-2-1" checked>
+    
+    <label class="md-nav__link" for="nav-4-2-1">
+      1.SwiftUI介绍 IntroducingSwiftUI
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.SwiftUI介绍 IntroducingSwiftUI" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2-1">
+        <span class="md-nav__icon md-icon"></span>
+        1.SwiftUI介绍 IntroducingSwiftUI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-1-1" type="checkbox" id="nav-4-2-1-1" checked>
+    
+    <label class="md-nav__link" for="nav-4-2-1-1">
+      1.SwiftUI基本件 SwiftUIEssentials
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.SwiftUI基本件 SwiftUIEssentials" data-md-level="4">
+      <label class="md-nav__title" for="nav-4-2-1-1">
+        <span class="md-nav__icon md-icon"></span>
+        1.SwiftUI基本件 SwiftUIEssentials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../1.%E5%88%9B%E5%BB%BA%E5%B9%B6%E7%BB%84%E5%90%88%E8%A7%86%E5%9B%BE-CreatingAndCombiningViews/" class="md-nav__link">
+      创建并组合视图-CreatingAndCombiningViews
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        构建列表和导航-BuildingListsAndNavigation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      构建列表和导航-BuildingListsAndNavigation
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-get-to-know-the-sample-data" class="md-nav__link">
+    1.了解简单数据-Get to Know the Sample Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-create-the-row-view" class="md-nav__link">
+    2.创建行视图-Create the Row View
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-customize-the-row-preview" class="md-nav__link">
+    3.自定义行预览-Customize the Row Preview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-create-the-list-of-landmarks" class="md-nav__link">
+    4.创建地标列表-Create the List of Landmarks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-make-the-list-dynamic" class="md-nav__link">
+    5.创建动态列表-Make the List Dynamic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-set-up-navigation-between-list-and-detail" class="md-nav__link">
+    6.设置列表和详细信息之间的导航-Set Up Navigation Between List and Detail
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-pass-data-into-child-views" class="md-nav__link">
+    7.将数据传递至子视图-Pass Data into Child Views
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-previews-dynamically" class="md-nav__link">
+    8.动态生成预览- Previews Dynamically
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../3.%E5%A4%84%E7%90%86%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5-HandlingUserInput/" class="md-nav__link">
+      处理用户输入-HandlingUserInput
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-1-2" type="checkbox" id="nav-4-2-1-2" >
+    
+    <label class="md-nav__link" for="nav-4-2-1-2">
+      4.框架集成 FrameworkIntegration
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="4.框架集成 FrameworkIntegration" data-md-level="4">
+      <label class="md-nav__title" for="nav-4-2-1-2">
+        <span class="md-nav__icon md-icon"></span>
+        4.框架集成 FrameworkIntegration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../4.%E6%A1%86%E6%9E%B6%E9%9B%86%E6%88%90-FrameworkIntegration/1.%E7%BB%93%E5%90%88UIKit-InterfacingWithUIKit/" class="md-nav__link">
+      结合UIKit-InterfacingWithUIKit
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-2" type="checkbox" id="nav-4-2-2" >
+    
+    <label class="md-nav__link" for="nav-4-2-2">
+      2.APP结构和行为 App Structure and Behavior
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="2.APP结构和行为 App Structure and Behavior" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        2.APP结构和行为 App Structure and Behavior
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../2.APP%E7%BB%93%E6%9E%84%E5%92%8C%E8%A1%8C%E4%B8%BA-App%20Structure%20and%20Behavior/0.APP%E7%BB%93%E6%9E%84%E5%92%8C%E8%A1%8C%E4%B8%BA-App%20Structure%20and%20Behavior/" class="md-nav__link">
+      0.APP结构和行为-App Structure and Behavior
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-2-2" type="checkbox" id="nav-4-2-2-2" >
+    
+    <label class="md-nav__link" for="nav-4-2-2-2">
+      1.必需 Essentials
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.必需 Essentials" data-md-level="4">
+      <label class="md-nav__title" for="nav-4-2-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        1.必需 Essentials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../2.APP%E7%BB%93%E6%9E%84%E5%92%8C%E8%A1%8C%E4%B8%BA-App%20Structure%20and%20Behavior/1.%E5%BF%85%E9%9C%80-Essentials/1.App/" class="md-nav__link">
+      App
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" >
+    
+    <label class="md-nav__link" for="nav-4-3">
+      4.在Xcode中预览 PreviewsInXcode
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="4.在Xcode中预览 PreviewsInXcode" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        <span class="md-nav__icon md-icon"></span>
+        4.在Xcode中预览 PreviewsInXcode
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3-1" type="checkbox" id="nav-4-3-1" >
+    
+    <label class="md-nav__link" for="nav-4-3-1">
+      1.预览 Previews
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.预览 Previews" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-1">
+        <span class="md-nav__icon md-icon"></span>
+        1.预览 Previews
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../4.%E5%9C%A8Xcode%E4%B8%AD%E9%A2%84%E8%A7%88-PreviewsInXcode/1.%E9%A2%84%E8%A7%88-Previews/0.%E9%A2%84%E8%A7%88-Previews/" class="md-nav__link">
+      0.预览 Previews
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3-1-2" type="checkbox" id="nav-4-3-1-2" >
+    
+    <label class="md-nav__link" for="nav-4-3-1-2">
+      1.创建预览 PreviewCreation
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.创建预览 PreviewCreation" data-md-level="4">
+      <label class="md-nav__title" for="nav-4-3-1-2">
+        <span class="md-nav__icon md-icon"></span>
+        1.创建预览 PreviewCreation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3-1-2-1" type="checkbox" id="nav-4-3-1-2-1" >
+    
+    <label class="md-nav__link" for="nav-4-3-1-2-1">
+      1.预览提供者 PreviewProvider
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.预览提供者 PreviewProvider" data-md-level="5">
+      <label class="md-nav__title" for="nav-4-3-1-2-1">
+        <span class="md-nav__icon md-icon"></span>
+        1.预览提供者 PreviewProvider
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../4.%E5%9C%A8Xcode%E4%B8%AD%E9%A2%84%E8%A7%88-PreviewsInXcode/1.%E9%A2%84%E8%A7%88-Previews/1.%E5%88%9B%E5%BB%BA%E9%A2%84%E8%A7%88-PreviewCreation/1.%E9%A2%84%E8%A7%88%E6%8F%90%E4%BE%9B%E8%80%85-PreviewProvider/0.%E9%A2%84%E8%A7%88%E6%8F%90%E4%BE%9B%E8%80%85-PreviewProvider/" class="md-nav__link">
+      预览提供者-PreviewProvider
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3-1-2-1-2" type="checkbox" id="nav-4-3-1-2-1-2" >
+    
+    <label class="md-nav__link" for="nav-4-3-1-2-1-2">
+      1.设置类型 SettingTheType
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.设置类型 SettingTheType" data-md-level="6">
+      <label class="md-nav__title" for="nav-4-3-1-2-1-2">
+        <span class="md-nav__icon md-icon"></span>
+        1.设置类型 SettingTheType
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../4.%E5%9C%A8Xcode%E4%B8%AD%E9%A2%84%E8%A7%88-PreviewsInXcode/1.%E9%A2%84%E8%A7%88-Previews/1.%E5%88%9B%E5%BB%BA%E9%A2%84%E8%A7%88-PreviewCreation/1.%E9%A2%84%E8%A7%88%E6%8F%90%E4%BE%9B%E8%80%85-PreviewProvider/1.%E8%AE%BE%E7%BD%AE%E7%B1%BB%E5%9E%8B-SettingTheType/1.Previews/" class="md-nav__link">
+      1.Previews
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3-1-2-1-3" type="checkbox" id="nav-4-3-1-2-1-3" >
+    
+    <label class="md-nav__link" for="nav-4-3-1-2-1-3">
+      2.生成预览者 GeneratingPreviews
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="2.生成预览者 GeneratingPreviews" data-md-level="6">
+      <label class="md-nav__title" for="nav-4-3-1-2-1-3">
+        <span class="md-nav__icon md-icon"></span>
+        2.生成预览者 GeneratingPreviews
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../4.%E5%9C%A8Xcode%E4%B8%AD%E9%A2%84%E8%A7%88-PreviewsInXcode/1.%E9%A2%84%E8%A7%88-Previews/1.%E5%88%9B%E5%BB%BA%E9%A2%84%E8%A7%88-PreviewCreation/1.%E9%A2%84%E8%A7%88%E6%8F%90%E4%BE%9B%E8%80%85-PreviewProvider/2.%E7%94%9F%E6%88%90%E9%A2%84%E8%A7%88%E8%80%85-GeneratingPreviews/1.platform/" class="md-nav__link">
+      1.platform
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../4.%E5%9C%A8Xcode%E4%B8%AD%E9%A2%84%E8%A7%88-PreviewsInXcode/1.%E9%A2%84%E8%A7%88-Previews/1.%E5%88%9B%E5%BB%BA%E9%A2%84%E8%A7%88-PreviewCreation/1.%E9%A2%84%E8%A7%88%E6%8F%90%E4%BE%9B%E8%80%85-PreviewProvider/2.%E7%94%9F%E6%88%90%E9%A2%84%E8%A7%88%E8%80%85-GeneratingPreviews/2.previews/" class="md-nav__link">
+      2.previews
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-get-to-know-the-sample-data" class="md-nav__link">
+    1.了解简单数据-Get to Know the Sample Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-create-the-row-view" class="md-nav__link">
+    2.创建行视图-Create the Row View
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-customize-the-row-preview" class="md-nav__link">
+    3.自定义行预览-Customize the Row Preview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-create-the-list-of-landmarks" class="md-nav__link">
+    4.创建地标列表-Create the List of Landmarks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-make-the-list-dynamic" class="md-nav__link">
+    5.创建动态列表-Make the List Dynamic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-set-up-navigation-between-list-and-detail" class="md-nav__link">
+    6.设置列表和详细信息之间的导航-Set Up Navigation Between List and Detail
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-pass-data-into-child-views" class="md-nav__link">
+    7.将数据传递至子视图-Pass Data into Child Views
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-previews-dynamically" class="md-nav__link">
+    8.动态生成预览- Previews Dynamically
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="-buildinglistsandnavigation">构建列表和导航-BuildingListsAndNavigation</h1>
+<p>在设置了基本的地标详细视图后，您需要提供一种方式让用户查看完整的地标列表，并查看每个位置的详细信息。</p>
+<p>您将创建可以显示任何地标信息的视图，并动态生成一个滚动列表，用户可以点击该列表查看某个地标的详细视图。为了对用户界面进行微调，您将使用Xcode的画布在不同的设备尺寸下呈现多个预览。</p>
+<p>下载项目文件开始构建这个项目，并按照以下步骤进行。</p>
+<blockquote>
+<p>With the basic landmark detail view set up, you need to provide a way for users to see the full list of landmarks, and to view the details about each location.</p>
+<p>You’ll create views that can show information about any landmark, and dynamically generate a scrolling list that a user can tap to see a detail view for a landmark. To fine-tune the UI, you’ll use Xcode’s canvas to render multiple previews at different device sizes.</p>
+<p>Download the project files to begin building this project, and follow the steps below.</p>
+</blockquote>
+<p><a href="https://docs-assets.developer.apple.com/published/f021500afcdf6c3930549f1ffeb65e7e/120/BuildingListsAndNavigation.zip">项目文件下载</a></p>
+<h2 id="1-get-to-know-the-sample-data">1.了解简单数据-Get to Know the Sample Data</h2>
+<p>在第一篇教程中，你将信息硬编码到所有的自定义视图中。在这里，您将学习如何将数据传递到您的自定义视图中进行显示。</p>
+<p>下载入门项目并熟悉样本数据，即可开始学习。</p>
+<blockquote>
+<p>In the first tutorial, you hard-coded information into all of your custom views. Here, you’ll learn to pass data into your custom views for display.</p>
+<p>Get started by downloading the starter project and familiarizing yourself with the sample data.</p>
+</blockquote>
+<ul>
+<li>第一步</li>
+</ul>
+<p>在项目导航器中，选择<strong>Models</strong>&gt;<code>Landmark.swift</code>。</p>
+<p><code>Landmark.swift</code>声明一个<code>Landmark</code>结构，该结构存储了应用程序需要显示的所有地标信息，并从<code>landmarkData.json</code>导入一个地标数据数组。</p>
+<ul>
+<li>第二步</li>
+</ul>
+<p>在项目导航器中，选择<strong>Resources</strong>&gt;<code>landmarkData.json</code>。</p>
+<p>您将在本教程的其余部分以及后续的所有内容中使用这个样本数据。</p>
+<ul>
+<li>第三步</li>
+</ul>
+<p>请注意，<code>创建并组合视图-CreatingAndCombiningViews</code>这一节中的 <code>ContentView</code>现在被命名为 <code>LandmarkDetail</code>。</p>
+<p>在本教程和下面的每个教程中，您将创建更多的视图类型。</p>
+<pre><code class="language-swift">//
+//  Landmark.swift
+//  Landmarks
+//
+//  Created by EchoSun on 2020/12/22.
+//
+
+import SwiftUI
+import CoreLocation
+
+
+struct Landmark: Hashable, Codable {
+    var id: Int
+    var name: String
+    fileprivate var imageName: String
+    fileprivate var coordinates: Coordinates
+    var state: String
+    var park: String
+    var category: Category
+
+    var locationCoordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(
+            latitude: coordinates.latitude,
+            longitude: coordinates.longitude)
+    }
+
+    enum Category: String, CaseIterable, Codable, Hashable {
+        case featured = &quot;Featured&quot;
+        case lakes = &quot;Lakes&quot;
+        case rivers = &quot;Rivers&quot;
+    }
+}
+
+extension Landmark {
+    var image: Image {
+        ImageStore.shared.image(name: imageName)
+    }
+}
+
+struct Coordinates: Hashable, Codable {
+    var latitude: Double
+    var longitude: Double
+}
+</code></pre>
+<blockquote>
+<p>Step 1</p>
+<p>In the Project navigator, choose<strong>Models</strong>&gt;<code>Landmark.swift</code>.</p>
+<p><code>Landmark.swift</code>declares a<code>Landmark</code>structure that stores all of the landmark information the app needs to display, and imports an array of landmark data from<code>landmarkData.json</code>.</p>
+<p>Step 2</p>
+<p>In the Project navigator, choose<strong>Resources</strong>&gt;<code>landmarkData.json</code>.</p>
+<p>You’ll use this sample data throughout the remainder of this tutorial, and for all that follow.</p>
+<p>Step 3</p>
+<p>Note that the<code>ContentView</code>type from<a href="doc://com.apple.documentation/tutorials/swiftui/creating-and-combining-views">Creating and Combining Views</a>is now named<code>LandmarkDetail</code>.</p>
+<p>You’ll create several more view types in this and each of the following tutorials.</p>
+</blockquote>
+<h2 id="2-create-the-row-view">2.创建行视图-Create the Row View</h2>
+<p>在本教程中，您将构建的第一个视图是一个用于显示每个地标详细信息的行。这个行视图将信息存储在它所显示的地标的属性中，因此一个视图可以显示任何地标。稍后，您将把多个行组合成一个地标列表。</p>
+<blockquote>
+<p>The first view you’ll build in this tutorial is a row for displaying details about each landmark. This row view stores information in a property for the landmark it displays, so that one view can display any landmark. Later, you’ll combine multiple rows into a list of landmarks.</p>
+</blockquote>
+<ul>
+<li>第一步</li>
+</ul>
+<p>创建一个新的SwiftUI视图，命名为<code>LandmarkRow.swift</code>。</p>
+<ul>
+<li>第二步</li>
+</ul>
+<p>如果预览还不可见，选择 <strong>Editor &gt; Canvas</strong>，然后点击<strong>Resume</strong>来显示画布。</p>
+<ul>
+<li>第三步</li>
+</ul>
+<p>添加<code>landmark</code>作为<code>LandmarkRow</code>的一个存储属性。</p>
+<p>当你添加<code>landmark</code>属性时，预览停止工作，因为<code>LandmarkRow</code>类型在初始化时需要一个地标实例。</p>
+<p>为了恢复预览，你需要修改预览提供者(preview provider)。</p>
+<ul>
+<li>第四步</li>
+</ul>
+<p>在 <code>LandmarkRow_Previews</code> 的 <code>previews</code> static属性中，将landmark参数添加到 <code>LandmarkRow</code> 初始化中，指定<code>landmarkData</code>数组的第一个元素。</p>
+<p>预览显示的是文字，<strong>Hello World</strong>。</p>
+<p>固定后，您就可以为该行建立布局了。</p>
+<ul>
+<li>第五步</li>
+</ul>
+<p>将现有的文本视图嵌入到<code>HStack</code>中。</p>
+<ul>
+<li>第六步</li>
+</ul>
+<p>修改文本视图，使用 <code>landmark</code>属性的 <code>name</code>。</p>
+<ul>
+<li>第七步</li>
+</ul>
+<p>在文本视图前添加图像，在文本视图后添加spacer，从而完成行</p>
+<pre><code class="language-swift">//
+//  LandmarkRow.swift
+//  Landmarks
+//
+//  Created by EchoSun on 2020/12/22.
+//
+
+import SwiftUI
+
+struct LandmarkRow: View {
+    var landmark: Landmark
+
+    var body: some View {
+        HStack {
+            landmark.image
+                .resizable()
+                .frame(width: 50, height: 50)
+            Text(landmark.name)
+            Spacer()
+        }
+    }
+}
+
+struct LandmarkRow_Previews: PreviewProvider {
+    static var previews: some View {
+        LandmarkRow(landmark: landmarkData[0])
+    }
+}
+
+</code></pre>
+<pre><code class="language-swift">//
+//  Landmark.swift
+//  Landmarks
+//
+//  Created by EchoSun on 2020/12/22.
+//
+
+import SwiftUI
+import CoreLocation
+
+
+struct Landmark: Hashable, Codable {
+    var id: Int
+    var name: String
+    fileprivate var imageName: String
+    fileprivate var coordinates: Coordinates
+    var state: String
+    var park: String
+    var category: Category
+
+    var locationCoordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(
+            latitude: coordinates.latitude,
+            longitude: coordinates.longitude)
+    }
+
+    enum Category: String, CaseIterable, Codable, Hashable {
+        case featured = &quot;Featured&quot;
+        case lakes = &quot;Lakes&quot;
+        case rivers = &quot;Rivers&quot;
+    }
+}
+
+extension Landmark {
+    var image: Image {
+        Image(imageName)
+//        ImageStore.shared.image(name: imageName)
+    }
+}
+
+struct Coordinates: Hashable, Codable {
+    var latitude: Double
+    var longitude: Double
+}
+
+</code></pre>
+<pre><code class="language-swift">//
+//  ModelData.swift
+//  Landmarks
+//
+//  Created by EchoSun on 2020/12/22.
+//
+
+import Foundation
+
+var landmarkData: [Landmark] = load(&quot;landmarkData.json&quot;)
+
+func load&lt;T: Decodable&gt;(_ filename: String) -&gt; T {
+    let data: Data
+
+    guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
+        else {
+            fatalError(&quot;Couldn't find \(filename) in main bundle.&quot;)
+    }
+
+    do {
+        data = try Data(contentsOf: file)
+    } catch {
+        fatalError(&quot;Couldn't load \(filename) from main bundle:\n\(error)&quot;)
+    }
+
+    do {
+        let decoder = JSONDecoder()
+        return try decoder.decode(T.self, from: data)
+    } catch {
+        fatalError(&quot;Couldn't parse \(filename) as \(T.self):\n\(error)&quot;)
+    }
+}
+
+</code></pre>
+<blockquote>
+<p>Step 1</p>
+<p>Create a new SwiftUI view, named<code>LandmarkRow.swift</code>.</p>
+<p>Step 2</p>
+<p>If the preview isn’t visible already, show the canvas by selecting<strong>Editor &gt; Canvas</strong>, and then click<strong>Resume</strong>.</p>
+<p>Step 3</p>
+<p>Add<code>landmark</code>as a stored property of<code>LandmarkRow</code>.</p>
+<p>When you add the<code>landmark</code>property, the preview stops working, because the<code>LandmarkRow</code>type needs a landmark instance during initialization.</p>
+<p>To fix the preview, you’ll need to modify the preview provider.</p>
+<p>Step 4</p>
+<p>In the<code>previews</code>static property of<code>LandmarkRow_Previews</code>, add the landmark parameter to the<code>LandmarkRow</code>initializer, specifying the first element of the<code>landmarkData</code>array.</p>
+<p>The preview displays the text,<strong>Hello World</strong>.</p>
+<p>With that fixed, you can build the layout for the row.</p>
+<p>Step 5</p>
+<p>Embed the existing text view in an<code>HStack</code>.</p>
+<p>Step 6</p>
+<p>Modify the text view to use the<code>landmark</code>property’s<code>name</code>.</p>
+<p>Step 7</p>
+<p>Complete the row by adding an image before the text view, and a spacer after it.</p>
+</blockquote>
+<h2 id="3-customize-the-row-preview">3.自定义行预览-Customize the Row Preview</h2>
+<p>Xcode的画布会自动识别并显示当前编辑器中符合 "PreviewProvider "协议的任何类型。预览提供者会返回一个或多个视图，并提供配置大小和设备的选项。</p>
+<p>您可以自定义从预览提供者返回的内容，以准确地呈现对您最有帮助的预览。</p>
+<blockquote>
+<p>Xcode’s canvas automatically recognizes and displays any type in the current editor that conforms to the<code>PreviewProvider</code>protocol. A preview provider returns one or more views, with options to configure the size and device.</p>
+<p>You can customize the returned content from a preview provider to render exactly the previews that are most helpful to you.</p>
+</blockquote>
+<p>第一步</p>
+<p>在<code>LandmarkRow_Previews</code>中，更新<code>landmark</code>参数为<code>landmarkData</code>数组中的第二个元素。</p>
+<p>预览会立即改变，显示第二个样本地标而不是第一个。</p>
+<p>第二步</p>
+<p>使用<code>previewLayout(_:)</code>修改器来设置一个近似于列表中一行的大小。</p>
+<p>您可以使用<code>Group</code>从一个预览提供者返回多个预览。</p>
+<p>第三步</p>
+<p>将返回的行包在<code>Group</code>中，再将第一行添加回来。</p>
+<p><code>Group</code>是一个用于分组视图内容的容器。Xcode将该组的子视图作为单独的预览显示在画布中。</p>
+<p>第四步</p>
+<p>为了简化代码，将<code>previewLayout(_:)</code>调用移到组的子声明的外面。</p>
+<p>视图的子声明继承了视图的上下文设置，如预览配置。</p>
+<p>您在预览提供者中编写的代码只改变Xcode在画布中显示的内容。</p>
+<pre><code class="language-swift">//
+//  LandmarkRow.swift
+//  Landmarks
+//
+//  Created by EchoSun on 2020/12/22.
+//
+
+import SwiftUI
+
+struct LandmarkRow: View {
+    var landmark: Landmark
+
+    var body: some View {
+        HStack {
+            landmark.image
+                .resizable()
+                .frame(width: 50, height: 50)
+            Text(landmark.name)
+            Spacer()
+        }
+    }
+}
+
+struct LandmarkRow_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            LandmarkRow(landmark: landmarkData[0])
+            LandmarkRow(landmark: landmarkData[1])
+        }
+        .previewLayout(.fixed(width: 300, height: 70))
+    }
+}
+</code></pre>
+<blockquote>
+<p>Step 1</p>
+<p>In<code>LandmarkRow_Previews</code>, update the<code>landmark</code>parameter to be the second element in the<code>landmarkData</code>array.</p>
+<p>The preview immediately changes to show the second sample landmark instead of the first.</p>
+<p>Step 2</p>
+<p>Use the<code>previewLayout(_:)</code>modifier to set a size that approximates a row in a list.</p>
+<p>You can use a<code>Group</code>to return multiple previews from a preview provider.</p>
+<p>Step 3</p>
+<p>Wrap the returned row in a<code>Group</code>, and add the first row back again.</p>
+<p><code>Group</code>is a container for grouping view content. Xcode renders the group’s child views as separate previews in the canvas.</p>
+<p>Step 4</p>
+<p>To simplify the code, move the<code>previewLayout(_:)</code>call to the outside of the group’s child declarations.</p>
+<p>A view’s children inherit the view’s contextual settings, such as preview configurations.</p>
+<p>The code you write in a preview provider only changes what Xcode displays in the canvas.</p>
+</blockquote>
+<h2 id="4-create-the-list-of-landmarks">4.创建地标列表-Create the List of Landmarks</h2>
+<p>当你使用SwiftUI的<code>List</code>类型时，你可以显示一个平台特定的视图列表。列表中的元素可以是静态的，比如到目前为止你已经创建的堆栈的子视图，也可以是动态生成的。你甚至可以混合静态和动态生成的视图。</p>
+<blockquote>
+<p>When you use SwiftUI’s<code>List</code>type, you can display a platform-specific list of views. The elements of the list can be static, like the child views of the stacks you’ve created so far, or dynamically generated. You can even mix static and dynamically generated views.</p>
+</blockquote>
+<ul>
+<li>第1步</li>
+</ul>
+<p>创建一个新的SwiftUI视图，命名为<code>LandmarkList.swift</code>。</p>
+<ul>
+<li>第二步</li>
+</ul>
+<p>将默认的 "Text "view替换为 "List"，并提供 "LandmarkRow "实例，将前两个地标作为列表的子节点。</p>
+<p>预览以适合iOS的列表样式显示两个地标。</p>
+<pre><code class="language-swift">//
+//  LandmarkList.swift
+//  Landmarks
+//
+//  Created by EchoSun on 2020/12/22.
+//
+
+import SwiftUI
+
+struct LandmarkList: View {
+    var body: some View {
+        List {
+            LandmarkRow(landmark: landmarkData[0])
+            LandmarkRow(landmark: landmarkData[1])
+        }
+    }
+}
+
+struct LandmarkList_Previews: PreviewProvider {
+    static var previews: some View {
+        LandmarkList()
+    }
+}
+
+</code></pre>
+<blockquote>
+<p>Step 1</p>
+<p>Create a new SwiftUI view, named<code>LandmarkList.swift</code>.</p>
+<p>Step 2</p>
+<p>Replace the default<code>Text</code>view with a<code>List</code>, and provide<code>LandmarkRow</code>instances with the first two landmarks as the list’s children.</p>
+<p>The preview shows the two landmarks rendered in a list style that’s appropriate for iOS.</p>
+</blockquote>
+<h2 id="5-make-the-list-dynamic">5.创建动态列表-Make the List Dynamic</h2>
+<p>你可以不单独指定一个列表的元素，而是直接从一个集合中生成行。</p>
+<p>您可以通过传递您的数据集合和一个为集合中的每个元素提供视图的闭包来创建一个显示集合元素的列表。列表通过使用提供的闭包将集合中的每个元素转换为一个子视图。</p>
+<blockquote>
+<p>Instead of specifying a list’s elements individually, you can generate rows directly from a collection.</p>
+<p>You can create a list that displays the elements of collection by passing your collection of data and a closure that provides a view for each element in the collection. The list transforms each element in the collection into a child view by using the supplied closure.</p>
+</blockquote>
+<ul>
+<li>步骤1</li>
+</ul>
+<p>删除两个静态的地标行，而将<code>landmarkData</code>传递给<code>List</code>initializer。</p>
+<p>Lists的工作原理是 <em>identifiable</em> data。你可以通过两种方式之一来使你的数据可识别：通过与你的数据一起传递一个键路径到一个唯一标识每个元素的属性，或者通过使你的数据类型符合<code>Identifiable</code>协议。</p>
+<ul>
+<li>第二步</li>
+</ul>
+<p>通过从闭包中返回一个<code>LandmarkRow</code>来完成动态生成的列表。</p>
+<p>这将为 "landmarkData "数组中的每个元素创建一个 "LandmarkRow"。</p>
+<p>接下来，你将通过在<code>Landmark</code>类型中添加<code>Identifiable</code>conformance 来简化<code>List</code>代码。</p>
+<ul>
+<li>第三步</li>
+</ul>
+<p>切换到 "Landmark.swift "并声明符合 "Identifiable "协议。</p>
+<p>由于<code>Landmark</code>类型已经具有<code>Identifiable</code>protocol所要求的<code>id</code>属性，所以没有更多的工作要做。</p>
+<ul>
+<li>第四步</li>
+</ul>
+<p>切换回<code>LandmarkList.swift</code>并删除<code>id</code>参数。</p>
+<p>从现在开始，您可以直接使用<code>Landmark</code>元素的集合。</p>
+<blockquote>
+<p>Step 1</p>
+<p>Remove the two static landmark rows, and instead pass<code>landmarkData</code>to the<code>List</code>initializer.</p>
+<p>Lists work with <em>identifiable</em> data. You can make your data identifiable in one of two ways: by passing along with your data a key path to a property that uniquely identifies each element, or by making your data type conform to the<code>Identifiable</code>protocol.</p>
+<p>Step 2</p>
+<p>Complete the dynamically-generated list by returning a<code>LandmarkRow</code>from the closure.</p>
+<p>This creates one<code>LandmarkRow</code>for each element in the<code>landmarkData</code>array.</p>
+<p>Next, you’ll simplify the<code>List</code>code by adding<code>Identifiable</code>conformance to the<code>Landmark</code>type.</p>
+<p>Step 3</p>
+<p>Switch to<code>Landmark.swift</code>and declare conformance to the<code>Identifiable</code>protocol.</p>
+<p>Since the<code>Landmark</code>type already has the<code>id</code>property required by<code>Identifiable</code>protocol, there’s no more work to do.</p>
+<p>Step 4</p>
+<p>Switch back to<code>LandmarkList.swift</code>and remove the<code>id</code>parameter.</p>
+<p>From now on, you’ll be able to use collections of<code>Landmark</code>elements directly.</p>
+</blockquote>
+<h2 id="6-set-up-navigation-between-list-and-detail">6.设置列表和详细信息之间的导航-Set Up Navigation Between List and Detail</h2>
+<p>列表显示正确，但你还不能点击一个单独的地标来查看该地标的详细页面。</p>
+<p>您可以通过将列表嵌入到一个 "导航视图 "中来添加导航功能，然后将每一行嵌套在一个 "导航链接 "中，以设置一个到目标视图的转换。</p>
+<blockquote>
+<p>The list renders properly, but you can’t tap an individual landmark to see that landmark’s detail page yet.</p>
+<p>You add navigation capabilities to a list by embedding it in a<code>NavigationView</code>, and then nesting each row in a<code>NavigationLink</code>to set up a transtition to a destination view.</p>
+</blockquote>
+<ul>
+<li>第一步</li>
+</ul>
+<p>将动态生成的地标列表嵌入到<code>NavigationView</code>中。</p>
+<ul>
+<li>第二步：将动态生成的地标列表嵌入到导航视图中。</li>
+</ul>
+<p>调用<code>navigationBarTitle(_:)</code>修改器方法来设置显示列表时导航栏的标题。</p>
+<ul>
+<li>第三步</li>
+</ul>
+<p>在列表的闭合中，将返回的行包裹在一个<code>NavigationLink</code>中，指定<code>LandmarkDetail</code>view作为目标。</p>
+<ul>
+<li>第四步</li>
+</ul>
+<p>您可以通过切换到实时模式，直接在预览中试用导航。点击 "实时预览 "按钮，并点击一个地标来访问详细页面。</p>
+<blockquote>
+<p>Step 1</p>
+<p>Embed the dynamically generated list of landmarks in a<code>NavigationView</code>.</p>
+<p>Step 2</p>
+<p>Call the<code>navigationBarTitle(_:)</code>modifier method to set the title of the navigation bar when displaying the list.</p>
+<p>Step 3</p>
+<p>Inside the list’s closure, wrap the returned row in a<code>NavigationLink</code>, specifying the<code>LandmarkDetail</code>view as the destination.</p>
+<p>Step 4</p>
+<p>You can try out the navigation directly in the preview by switching to live mode. Click the Live Preview button and tap a landmark to visit the detail page.</p>
+</blockquote>
+<h2 id="7-pass-data-into-child-views">7.将数据传递至子视图-Pass Data into Child Views</h2>
+<p>"LandmarkDetail "视图仍然使用硬编码的细节来显示其地标。就像 "LandmarkRow "一样，"LandmarkDetail "类型和它所包含的视图需要使用 "landmark "属性作为其数据的来源。</p>
+<p>从子视图开始，你将转换<code>CircleImage</code>，<code>MapView</code>，然后<code>LandmarkDetail</code>来显示传入的数据，而不是硬编码每行。</p>
+<blockquote>
+<p>The<code>LandmarkDetail</code>view still uses hard-coded details to show its landmark. Just like<code>LandmarkRow</code>, the<code>LandmarkDetail</code>type and the views it comprises need to use a<code>landmark</code>property as the source for their data.</p>
+<p>Starting with the child views, you’ll convert<code>CircleImage</code>,<code>MapView</code>, and then<code>LandmarkDetail</code>to display data that’s passed in, rather than hard-coding each row.</p>
+</blockquote>
+<ul>
+<li>第一步</li>
+</ul>
+<p>在<code>CircleImage.swift</code>中，为<code>CircleImage</code>添加一个存储<code>图像</code>属性。</p>
+<p>这是使用SwiftUI构建视图时的常见模式。你的自定义视图通常会包裹和封装一系列特定视图的修改器。</p>
+<ul>
+<li>第二步</li>
+</ul>
+<p>更新预览提供者以传递龟石的图像。</p>
+<ul>
+<li>第三步</li>
+</ul>
+<p>在MapView.swift中，给MapView添加一个坐标属性，并将代码转换为使用该属性，而不是硬编码经纬度。</p>
+<ul>
+<li>第四步</li>
+</ul>
+<p>更新预览提供者以传递数据数组中第一个地标的坐标。</p>
+<ul>
+<li>第五步</li>
+</ul>
+<p>更新预览提供者，传递数据阵列中第一个地标的坐标。</p>
+<p>在<code>LandmarkDetail.swift</code>中，为<code>LandmarkDetail</code>类型添加<code>Landmark</code>属性。</p>
+<ul>
+<li>第六步</li>
+</ul>
+<p>更新预览，使用<code>landmarkData</code>中的第一个地标。</p>
+<ul>
+<li>第七步</li>
+</ul>
+<p>将所需数据传递给您的自定义类型。</p>
+<ul>
+<li>第八步</li>
+</ul>
+<p>最后，调用<code>navigationBarTitle(_:displayMode:)</code>修改器，在显示详细视图时，给导航栏一个标题。</p>
+<ul>
+<li>第九步</li>
+</ul>
+<p>在<code>SceneDelegate.swift</code>中，将应用程序的根视图切换为<code>LandmarkList</code>。</p>
+<p>当在模拟器中独立运行时，您的应用程序将以<code>SceneDelegate</code>中定义的根视图启动，而不是预览。</p>
+<ul>
+<li>第十步：将应用程序的根视图切换为 "LandmarkList"。</li>
+</ul>
+<p>在<code>LandmarkList.swift</code>中，将当前的地标传递给目标<code>LandmarkDetail</code>。</p>
+<ul>
+<li>第十一步：将当前的地标传给目的地<code>LandmarkDetail</code>。</li>
+</ul>
+<p>切换到实时预览，当您从列表中导航时，可以看到详细视图显示正确的地标。</p>
+<blockquote>
+<p>Step 1</p>
+<p>In<code>CircleImage.swift</code>, add a stored<code>image</code>property to<code>CircleImage</code>.</p>
+<p>This is a common pattern when building views using SwiftUI. Your custom views will often wrap and encapsulate a series of modifiers for a particular view.</p>
+<p>Step 2</p>
+<p>Update the preview provider to pass the image of Turtle Rock.</p>
+<p>Step 3</p>
+<p>In<code>MapView.swift</code>, add a<code>coordinate</code>property to<code>MapView</code>and convert the code to use that property instead of hard-coding the latitude and longitude.</p>
+<p>Step 4</p>
+<p>Update the preview provider to pass the coordinate of the first landmark in the data array.</p>
+<p>Step 5</p>
+<p>In<code>LandmarkDetail.swift</code>, add a<code>Landmark</code>property to the<code>LandmarkDetail</code>type.</p>
+<p>Step 6</p>
+<p>Update the preview to use the first landmark from<code>landmarkData</code>.</p>
+<p>Step 7</p>
+<p>Pass the required data down to your custom types.</p>
+<p>Step 8</p>
+<p>Finally, call the<code>navigationBarTitle(_:displayMode:)</code>modifier to give the navigation bar a title when showing the detail view.</p>
+<p>Step 9</p>
+<p>In<code>SceneDelegate.swift</code>, switch the root view of the app to be<code>LandmarkList</code>.</p>
+<p>Your app starts with the root view defined in the<code>SceneDelegate</code>when running standalone in the simulator instead of the preview.</p>
+<p>Step 10</p>
+<p>In<code>LandmarkList.swift</code>, pass the current landmark to the destination<code>LandmarkDetail</code>.</p>
+<p>Step 11</p>
+<p>Switch to the live preview to see the detail view show the correct landmarks when you navigate from the list.</p>
+</blockquote>
+<h2 id="8-previews-dynamically">8.动态生成预览- Previews Dynamically</h2>
+<p>接下来，您将为<code>LandmarkList_Previews</code>preview 提供者添加代码，以在不同的设备尺寸下渲染列表视图的预览。默认情况下，预览以活动方案中的设备尺寸呈现。你可以通过调用<code>previewDevice(_:)</code>modifier方法来改变预览设备。</p>
+<blockquote>
+<p>Next, you’ll add code to the<code>LandmarkList_Previews</code>preview provider to render previews of the list view at different device sizes. By default, previews render at the size of the device in the active scheme. You can change the preview device by calling the<code>previewDevice(_:)</code>modifier method.</p>
+</blockquote>
+<ul>
+<li>步骤一</li>
+</ul>
+<p>首先将当前的列表预览改为以iPhone SE的大小进行渲染。</p>
+<p>您可以提供任何设备的名称，因为它出现在Xcode的方案菜单中。</p>
+<ul>
+<li>第二步</li>
+</ul>
+<p>在列表预览中，将 "LandmarkList "嵌入到 "ForEach "实例中，使用设备名称数组作为数据。</p>
+<p><code>ForEach</code>对集合的操作方式与列表相同，这意味着您可以在任何可以使用子视图的地方使用它，例如在堆栈、列表、组等中。当你的数据元素是简单的值类型时--就像你在这里使用的字符串--你可以使用<code>.self</code>作为标识符的键路径。</p>
+<ul>
+<li>第三步</li>
+</ul>
+<p>使用<code>previewDisplayName(_:)</code>修改器添加设备名称作为预览的标签。</p>
+<ul>
+<li>第四步</li>
+</ul>
+<p>您可以使用不同的设备进行实验，比较您的视图的渲染效果，所有这些都来自画布。</p>
+<blockquote>
+<p>Step 1</p>
+<p>Start by changing the current list preview to render at the size of an iPhone SE.</p>
+<p>You can provide the name of any device as it appears in Xcode’s scheme menu.</p>
+<p>Step 2</p>
+<p>Within the list preview, embed the<code>LandmarkList</code>in a<code>ForEach</code>instance, using an array of device names as the data.</p>
+<p><code>ForEach</code>operates on collections the same way as the list, which means you can use it anywhere you can use a child view, such as in stacks, lists, groups, and more. When the elements of your data are simple value types — like the strings you’re using here — you can use<code>\.self</code>as key path to the identifier.</p>
+<p>Step 3</p>
+<p>Use the<code>previewDisplayName(_:)</code>modifier to add the device names as labels for the previews.</p>
+<p>Step 4</p>
+<p>You can experiment with different devices to compare the renderings of your views, all from the canvas.</p>
+</blockquote>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../1.%E5%88%9B%E5%BB%BA%E5%B9%B6%E7%BB%84%E5%90%88%E8%A7%86%E5%9B%BE-CreatingAndCombiningViews/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                创建并组合视图-CreatingAndCombiningViews
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../3.%E5%A4%84%E7%90%86%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5-HandlingUserInput/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                处理用户输入-HandlingUserInput
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../../assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../../../assets/javascripts/worker/search.8c7e0a7e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

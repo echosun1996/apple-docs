@@ -1,0 +1,1443 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.2">
+    
+    
+      
+        <title>采用共同协议-AdoptingCommonProtocols - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.73f7c429.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#-adoptingcommonprotocols" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="My Docs" class="md-header-nav__button md-logo" aria-label="My Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              采用共同协议-AdoptingCommonProtocols
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../.." class="md-nav__link">
+      apple文档翻译计划
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../instruction/" class="md-nav__link">
+      说明
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Swift
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Swift" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Swift
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../0.swift%E6%96%87%E6%A1%A3%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+      swift文档说明
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2" >
+    
+    <label class="md-nav__link" for="nav-3-2">
+      1.标准库 StandardLibrary
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.标准库 StandardLibrary" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        <span class="md-nav__icon md-icon"></span>
+        1.标准库 StandardLibrary
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-1" type="checkbox" id="nav-3-2-1" >
+    
+    <label class="md-nav__link" for="nav-3-2-1">
+      1.整数 Int
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.整数 Int" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-1">
+        <span class="md-nav__icon md-icon"></span>
+        1.整数 Int
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../1.%E6%A0%87%E5%87%86%E5%BA%93-StandardLibrary/1.%E6%95%B4%E6%95%B0-Int/1.%E6%95%B4%E6%95%B0-Int/" class="md-nav__link">
+      1.整数-Int
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-2" type="checkbox" id="nav-3-2-2" >
+    
+    <label class="md-nav__link" for="nav-3-2-2">
+      2.浮点数 Double
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="2.浮点数 Double" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        2.浮点数 Double
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../1.%E6%A0%87%E5%87%86%E5%BA%93-StandardLibrary/2.%E6%B5%AE%E7%82%B9%E6%95%B0-Double/2.%E6%B5%AE%E7%82%B9%E6%95%B0-Double/" class="md-nav__link">
+      浮点数-Double
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-3" type="checkbox" id="nav-3-2-3" >
+    
+    <label class="md-nav__link" for="nav-3-2-3">
+      3.字符串 String
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="3.字符串 String" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-3">
+        <span class="md-nav__icon md-icon"></span>
+        3.字符串 String
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../1.%E6%A0%87%E5%87%86%E5%BA%93-StandardLibrary/3.%E5%AD%97%E7%AC%A6%E4%B8%B2-String/3.%E5%AD%97%E7%AC%A6%E4%B8%B2-String/" class="md-nav__link">
+      字符串-String
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-4" type="checkbox" id="nav-3-2-4" >
+    
+    <label class="md-nav__link" for="nav-3-2-4">
+      4.数组 Array
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="4.数组 Array" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-4">
+        <span class="md-nav__icon md-icon"></span>
+        4.数组 Array
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../1.%E6%A0%87%E5%87%86%E5%BA%93-StandardLibrary/4.%E6%95%B0%E7%BB%84-Array/4.%E6%95%B0%E7%BB%84-Array/" class="md-nav__link">
+      数组-Array
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-5" type="checkbox" id="nav-3-2-5" >
+    
+    <label class="md-nav__link" for="nav-3-2-5">
+      5.字典 Dictionary
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="5.字典 Dictionary" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-5">
+        <span class="md-nav__icon md-icon"></span>
+        5.字典 Dictionary
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../1.%E6%A0%87%E5%87%86%E5%BA%93-StandardLibrary/5.%E5%AD%97%E5%85%B8-Dictionary/5.%E5%AD%97%E5%85%B8-Dictionary/" class="md-nav__link">
+      字典-Dictionary.md
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" checked>
+    
+    <label class="md-nav__link" for="nav-3-3">
+      2.数据模型 DataModeling
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="2.数据模型 DataModeling" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        <span class="md-nav__icon md-icon"></span>
+        2.数据模型 DataModeling
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../1.%E7%BB%93%E6%9E%84%E4%BD%93%E5%92%8C%E7%B1%BB%E7%9A%84%E9%80%89%E6%8B%A9-ChoosingBetweenStructuresAndClasses/" class="md-nav__link">
+      结构体和类的选择-Choosing Between Structures and Classes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        采用共同协议-AdoptingCommonProtocols
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      采用共同协议-AdoptingCommonProtocols
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    概述
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conform-automatically-to-equatable-and-hashable" class="md-nav__link">
+    Conform Automatically to Equatable and Hashable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conform-manually-to-equatable-and-hashable" class="md-nav__link">
+    Conform Manually to Equatable and Hashable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-all-significant-properties-for-equatable-and-hashable" class="md-nav__link">
+    Use All Significant Properties for Equatable and Hashable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customize-nsobject-subclass-behavior" class="md-nav__link">
+    Customize NSObject Subclass Behavior
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    
+    <label class="md-nav__link" for="nav-4">
+      SwiftUI
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="SwiftUI" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        SwiftUI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../SwiftUI/0.swift%E6%96%87%E6%A1%A3%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+      swift文档说明
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" >
+    
+    <label class="md-nav__link" for="nav-4-2">
+      1.必需 Essentials
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.必需 Essentials" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        <span class="md-nav__icon md-icon"></span>
+        1.必需 Essentials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-1" type="checkbox" id="nav-4-2-1" >
+    
+    <label class="md-nav__link" for="nav-4-2-1">
+      1.SwiftUI介绍 IntroducingSwiftUI
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.SwiftUI介绍 IntroducingSwiftUI" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2-1">
+        <span class="md-nav__icon md-icon"></span>
+        1.SwiftUI介绍 IntroducingSwiftUI
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-1-1" type="checkbox" id="nav-4-2-1-1" >
+    
+    <label class="md-nav__link" for="nav-4-2-1-1">
+      1.SwiftUI基本件 SwiftUIEssentials
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.SwiftUI基本件 SwiftUIEssentials" data-md-level="4">
+      <label class="md-nav__title" for="nav-4-2-1-1">
+        <span class="md-nav__icon md-icon"></span>
+        1.SwiftUI基本件 SwiftUIEssentials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../SwiftUI/1.%E5%BF%85%E9%9C%80-Essentials/1.SwiftUI%E4%BB%8B%E7%BB%8D-IntroducingSwiftUI/1.SwiftUI%E5%9F%BA%E6%9C%AC%E4%BB%B6-SwiftUIEssentials/1.%E5%88%9B%E5%BB%BA%E5%B9%B6%E7%BB%84%E5%90%88%E8%A7%86%E5%9B%BE-CreatingAndCombiningViews/" class="md-nav__link">
+      创建并组合视图-CreatingAndCombiningViews
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../SwiftUI/1.%E5%BF%85%E9%9C%80-Essentials/1.SwiftUI%E4%BB%8B%E7%BB%8D-IntroducingSwiftUI/1.SwiftUI%E5%9F%BA%E6%9C%AC%E4%BB%B6-SwiftUIEssentials/2.%E6%9E%84%E5%BB%BA%E5%88%97%E8%A1%A8%E5%92%8C%E5%AF%BC%E8%88%AA-BuildingListsAndNavigation/" class="md-nav__link">
+      构建列表和导航-BuildingListsAndNavigation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../SwiftUI/1.%E5%BF%85%E9%9C%80-Essentials/1.SwiftUI%E4%BB%8B%E7%BB%8D-IntroducingSwiftUI/1.SwiftUI%E5%9F%BA%E6%9C%AC%E4%BB%B6-SwiftUIEssentials/3.%E5%A4%84%E7%90%86%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5-HandlingUserInput/" class="md-nav__link">
+      处理用户输入-HandlingUserInput
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-1-2" type="checkbox" id="nav-4-2-1-2" >
+    
+    <label class="md-nav__link" for="nav-4-2-1-2">
+      4.框架集成 FrameworkIntegration
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="4.框架集成 FrameworkIntegration" data-md-level="4">
+      <label class="md-nav__title" for="nav-4-2-1-2">
+        <span class="md-nav__icon md-icon"></span>
+        4.框架集成 FrameworkIntegration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../SwiftUI/1.%E5%BF%85%E9%9C%80-Essentials/1.SwiftUI%E4%BB%8B%E7%BB%8D-IntroducingSwiftUI/4.%E6%A1%86%E6%9E%B6%E9%9B%86%E6%88%90-FrameworkIntegration/1.%E7%BB%93%E5%90%88UIKit-InterfacingWithUIKit/" class="md-nav__link">
+      结合UIKit-InterfacingWithUIKit
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-2" type="checkbox" id="nav-4-2-2" >
+    
+    <label class="md-nav__link" for="nav-4-2-2">
+      2.APP结构和行为 App Structure and Behavior
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="2.APP结构和行为 App Structure and Behavior" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        2.APP结构和行为 App Structure and Behavior
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../SwiftUI/1.%E5%BF%85%E9%9C%80-Essentials/2.APP%E7%BB%93%E6%9E%84%E5%92%8C%E8%A1%8C%E4%B8%BA-App%20Structure%20and%20Behavior/0.APP%E7%BB%93%E6%9E%84%E5%92%8C%E8%A1%8C%E4%B8%BA-App%20Structure%20and%20Behavior/" class="md-nav__link">
+      0.APP结构和行为-App Structure and Behavior
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2-2-2" type="checkbox" id="nav-4-2-2-2" >
+    
+    <label class="md-nav__link" for="nav-4-2-2-2">
+      1.必需 Essentials
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.必需 Essentials" data-md-level="4">
+      <label class="md-nav__title" for="nav-4-2-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        1.必需 Essentials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../SwiftUI/1.%E5%BF%85%E9%9C%80-Essentials/2.APP%E7%BB%93%E6%9E%84%E5%92%8C%E8%A1%8C%E4%B8%BA-App%20Structure%20and%20Behavior/1.%E5%BF%85%E9%9C%80-Essentials/1.App/" class="md-nav__link">
+      App
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" >
+    
+    <label class="md-nav__link" for="nav-4-3">
+      4.在Xcode中预览 PreviewsInXcode
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="4.在Xcode中预览 PreviewsInXcode" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        <span class="md-nav__icon md-icon"></span>
+        4.在Xcode中预览 PreviewsInXcode
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3-1" type="checkbox" id="nav-4-3-1" >
+    
+    <label class="md-nav__link" for="nav-4-3-1">
+      1.预览 Previews
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.预览 Previews" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-1">
+        <span class="md-nav__icon md-icon"></span>
+        1.预览 Previews
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../SwiftUI/4.%E5%9C%A8Xcode%E4%B8%AD%E9%A2%84%E8%A7%88-PreviewsInXcode/1.%E9%A2%84%E8%A7%88-Previews/0.%E9%A2%84%E8%A7%88-Previews/" class="md-nav__link">
+      0.预览 Previews
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3-1-2" type="checkbox" id="nav-4-3-1-2" >
+    
+    <label class="md-nav__link" for="nav-4-3-1-2">
+      1.创建预览 PreviewCreation
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.创建预览 PreviewCreation" data-md-level="4">
+      <label class="md-nav__title" for="nav-4-3-1-2">
+        <span class="md-nav__icon md-icon"></span>
+        1.创建预览 PreviewCreation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3-1-2-1" type="checkbox" id="nav-4-3-1-2-1" >
+    
+    <label class="md-nav__link" for="nav-4-3-1-2-1">
+      1.预览提供者 PreviewProvider
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.预览提供者 PreviewProvider" data-md-level="5">
+      <label class="md-nav__title" for="nav-4-3-1-2-1">
+        <span class="md-nav__icon md-icon"></span>
+        1.预览提供者 PreviewProvider
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../SwiftUI/4.%E5%9C%A8Xcode%E4%B8%AD%E9%A2%84%E8%A7%88-PreviewsInXcode/1.%E9%A2%84%E8%A7%88-Previews/1.%E5%88%9B%E5%BB%BA%E9%A2%84%E8%A7%88-PreviewCreation/1.%E9%A2%84%E8%A7%88%E6%8F%90%E4%BE%9B%E8%80%85-PreviewProvider/0.%E9%A2%84%E8%A7%88%E6%8F%90%E4%BE%9B%E8%80%85-PreviewProvider/" class="md-nav__link">
+      预览提供者-PreviewProvider
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3-1-2-1-2" type="checkbox" id="nav-4-3-1-2-1-2" >
+    
+    <label class="md-nav__link" for="nav-4-3-1-2-1-2">
+      1.设置类型 SettingTheType
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="1.设置类型 SettingTheType" data-md-level="6">
+      <label class="md-nav__title" for="nav-4-3-1-2-1-2">
+        <span class="md-nav__icon md-icon"></span>
+        1.设置类型 SettingTheType
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../SwiftUI/4.%E5%9C%A8Xcode%E4%B8%AD%E9%A2%84%E8%A7%88-PreviewsInXcode/1.%E9%A2%84%E8%A7%88-Previews/1.%E5%88%9B%E5%BB%BA%E9%A2%84%E8%A7%88-PreviewCreation/1.%E9%A2%84%E8%A7%88%E6%8F%90%E4%BE%9B%E8%80%85-PreviewProvider/1.%E8%AE%BE%E7%BD%AE%E7%B1%BB%E5%9E%8B-SettingTheType/1.Previews/" class="md-nav__link">
+      1.Previews
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3-1-2-1-3" type="checkbox" id="nav-4-3-1-2-1-3" >
+    
+    <label class="md-nav__link" for="nav-4-3-1-2-1-3">
+      2.生成预览者 GeneratingPreviews
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="2.生成预览者 GeneratingPreviews" data-md-level="6">
+      <label class="md-nav__title" for="nav-4-3-1-2-1-3">
+        <span class="md-nav__icon md-icon"></span>
+        2.生成预览者 GeneratingPreviews
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../SwiftUI/4.%E5%9C%A8Xcode%E4%B8%AD%E9%A2%84%E8%A7%88-PreviewsInXcode/1.%E9%A2%84%E8%A7%88-Previews/1.%E5%88%9B%E5%BB%BA%E9%A2%84%E8%A7%88-PreviewCreation/1.%E9%A2%84%E8%A7%88%E6%8F%90%E4%BE%9B%E8%80%85-PreviewProvider/2.%E7%94%9F%E6%88%90%E9%A2%84%E8%A7%88%E8%80%85-GeneratingPreviews/1.platform/" class="md-nav__link">
+      1.platform
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../SwiftUI/4.%E5%9C%A8Xcode%E4%B8%AD%E9%A2%84%E8%A7%88-PreviewsInXcode/1.%E9%A2%84%E8%A7%88-Previews/1.%E5%88%9B%E5%BB%BA%E9%A2%84%E8%A7%88-PreviewCreation/1.%E9%A2%84%E8%A7%88%E6%8F%90%E4%BE%9B%E8%80%85-PreviewProvider/2.%E7%94%9F%E6%88%90%E9%A2%84%E8%A7%88%E8%80%85-GeneratingPreviews/2.previews/" class="md-nav__link">
+      2.previews
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    概述
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conform-automatically-to-equatable-and-hashable" class="md-nav__link">
+    Conform Automatically to Equatable and Hashable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conform-manually-to-equatable-and-hashable" class="md-nav__link">
+    Conform Manually to Equatable and Hashable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-all-significant-properties-for-equatable-and-hashable" class="md-nav__link">
+    Use All Significant Properties for Equatable and Hashable
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customize-nsobject-subclass-behavior" class="md-nav__link">
+    Customize NSObject Subclass Behavior
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="-adoptingcommonprotocols">采用共同协议-AdoptingCommonProtocols</h1>
+<blockquote>
+<p>Make your custom types easier to use by ensuring that they conform to Swift protocols.</p>
+</blockquote>
+<h2 id="_1">概述</h2>
+<blockquote>
+<p>When using custom types to model data in your programs, you may frequently need to check whether two values are the same or different, or whether a particular value is included in a list of values. This capability, as well as the ability to store values in a set or use them as keys in a dictionary, are governed by two related standard library protocols, Equatable and Hashable.</p>
+<ul>
+<li>
+<p>You can compare instances of an equatable type by using the equal-to (==) and not-equal-to (!=) operators.</p>
+</li>
+<li>
+<p>An instance of a hashable type can reduce its value mathematically to a single integer, which is used internally by sets and dictionaries to make lookups consistently fast.</p>
+</li>
+</ul>
+<p>Many standard library types are both equatable and hashable, including strings, integers, floating-point values, Boolean values, and collections of equatable and hashable types. The == comparison and the <code>contains(_:)</code> method call in the following example depend on strings and integers being equatable:</p>
+</blockquote>
+<pre><code class="language-swift">if username == &quot;Arturo&quot; {
+    print(&quot;Hi, Arturo!&quot;)
+}
+
+let favoriteNumbers = [4, 7, 8, 9]
+if favoriteNumbers.contains(todaysDate.day) {
+    print(&quot;It's a good day today!&quot;)
+}
+</code></pre>
+<blockquote>
+<p>Conforming to the Equatable and Hashable protocols is straightforward and makes it easier to use your own types in Swift. It's a good idea for all your custom model types to conform.</p>
+</blockquote>
+<h2 id="conform-automatically-to-equatable-and-hashable">Conform Automatically to Equatable and Hashable</h2>
+<blockquote>
+<p>You can make many custom types equatable and hashable by simply declaring these protocol conformances in the same file as the type's original declaration. Add Equatable and Hashable to the list of adopted protocols when declaring the type, and the compiler automatically fills in the requirements for the two protocols:</p>
+</blockquote>
+<pre><code class="language-swift">/// A position in an x-y coordinate system.
+struct Position: Equatable, Hashable {
+    var x: Int
+    var y: Int
+
+    init(_ x: Int, _ y: Int) {
+        self.x = x
+        self.y = y
+    }
+}
+</code></pre>
+<blockquote>
+<p>With Equatable conformance, you can use the equal-to operator (==) or the not-equal-to operator (!=) with any two instances of the Position type.</p>
+</blockquote>
+<pre><code class="language-swift">let availablePositions = [Position(0, 0), Position(0, 1), Position(1, 0)]
+let gemPosition = Position(1, 0)
+
+for position in availablePositions {
+    if gemPosition == position {
+        print(&quot;Gem found at (\(position.x), \(position.y))!&quot;)
+    } else {
+        print(&quot;No gem at (\(position.x), \(position.y))&quot;)
+    }
+}
+// No gem at (0, 0)
+// No gem at (0, 1)
+// Gem found at (1, 0)!
+</code></pre>
+<blockquote>
+<p>Hashable conformance means that you can store positions in a set and quickly check whether you've visited a position before, as shown in the following example:</p>
+</blockquote>
+<pre><code class="language-swift">var visitedPositions: Set = [Position(0, 0), Position(1, 0)]
+let currentPosition = Position(1, 3)
+
+if visitedPositions.contains(currentPosition) {
+    print(&quot;Already visited (\(currentPosition.x), \(currentPosition.y))&quot;)
+} else {
+    print(&quot;First time at (\(currentPosition.x), \(currentPosition.y))&quot;)
+    visitedPositions.insert(currentPosition)
+}
+// First time at (1, 3)
+</code></pre>
+<blockquote>
+<p>In addition to simplifying your code, this automatic conformance reduces errors, because any new properties you add to your custom types are automatically included when hashing and testing for equality. A type is eligible for automatic conformance to Equatable and Hashable when it's a structure or an enumeration that meets these criteria:</p>
+<ul>
+<li>
+<p>For a structure, all its stored properties must conform to Equatable and Hashable.</p>
+</li>
+<li>
+<p>For an enumeration, all its associated values must conform to Equatable and Hashable. (Enumerations without associated values have Equatable and Hashable conformance even without declaring adoption.)</p>
+</li>
+</ul>
+</blockquote>
+<h2 id="conform-manually-to-equatable-and-hashable">Conform Manually to Equatable and Hashable</h2>
+<blockquote>
+<p>You need to manually implement Equatable and Hashable conformance for a type in these cases:</p>
+<ul>
+<li>
+<p>The type doesn't meet the criteria listed in the previous section.</p>
+</li>
+<li>
+<p>You want to customize the type's conformance.</p>
+</li>
+<li>
+<p>You want to extend a type declared in another file or module to conform.</p>
+</li>
+</ul>
+</blockquote>
+<pre><code class="language-swift">class Player {
+    var name: String
+    var position: Position
+
+    init(name: String, position: Position) {
+        self.name = name
+        self.position = position
+    }
+}
+</code></pre>
+<blockquote>
+<p>The Player type is a class, so it doesn't qualify for automatic synthesis of the Equatable or Hashable requirements. To make this class conform to the Equatable protocol, declare conformance in an extension and implement the static == operator method. Compare each significant property for equality in your == method's implementation:</p>
+</blockquote>
+<pre><code class="language-swift">extension Player: Equatable {
+    static func ==(lhs: Player, rhs: Player) -&gt; Bool {
+        return lhs.name == rhs.name &amp;&amp; lhs.position == rhs.position
+    }
+}
+</code></pre>
+<blockquote>
+<p>To make Player conform to the Hashable protocol, declare conformance in another extension and implement the hash(into:) method. In the hash(into:) method, call the combine(_:) method on the provided hasher with each significant property:</p>
+</blockquote>
+<pre><code class="language-swift">extension Player: Hashable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
+        hasher.combine(position)
+    }
+}
+</code></pre>
+<h2 id="use-all-significant-properties-for-equatable-and-hashable">Use All Significant Properties for Equatable and Hashable</h2>
+<blockquote>
+<p>When implementing the == method and the hash(into:) method, use all the properties that affect whether two instances of your custom type are considered equal. In the implementations above, the Player type uses name and position in both methods.</p>
+<p>If your type contains properties that don't affect whether two instances are considered equal, exclude those properties from comparison in the == method and from hashing in hash(into:). For example, a type might cache an expensive computed value so that it only needs to calculate it once. If you compare two instances of that type, whether or not the computed value has been cached shouldn't affect their equality, so the cached value should be excluded from comparison and hashing.</p>
+<p><strong>Important</strong></p>
+<p>Always use the same properties in both your == and hash(into:) methods. Using different groups of properties in the two methods can lead to unexpected behavior or performance when using your custom type in sets and dictionaries.</p>
+</blockquote>
+<h2 id="customize-nsobject-subclass-behavior">Customize NSObject Subclass Behavior</h2>
+<blockquote>
+<p>NSObject subclasses inherit conformance to the Equatable and Hashable protocols, with equality based on instance identity. If you need to customize this behavior, override the isEqual(_:) method and hash property instead of the == operator method and hashValue property.</p>
+</blockquote>
+<pre><code class="language-swift">extension MyNSObjectSubclass {
+    override func isEqual(_ object: Any?) -&gt; Bool {
+        guard let other = object as? MyNSObjectSubclass
+            else { return false }
+        return self.firstProperty == other.firstProperty 
+            &amp;&amp; self.secondProperty == other.secondProperty
+    }
+
+    override var hash: Int {
+        var hasher = Hasher()
+        hasher.combine(firstProperty)
+        hasher.combine(secondProperty)
+        return hasher.finalize()
+    }
+}
+</code></pre>
+<blockquote>
+<p>As noted in the previous section, two instances that are considered equal must have the same hash value. If you override one of these declarations, you must also override the other to maintain that guarantee.</p>
+</blockquote>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../1.%E7%BB%93%E6%9E%84%E4%BD%93%E5%92%8C%E7%B1%BB%E7%9A%84%E9%80%89%E6%8B%A9-ChoosingBetweenStructuresAndClasses/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                结构体和类的选择-Choosing Between Structures and Classes
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../../SwiftUI/0.swift%E6%96%87%E6%A1%A3%E8%AF%B4%E6%98%8E/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                swift文档说明
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.8c7e0a7e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
